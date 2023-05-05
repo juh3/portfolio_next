@@ -3,22 +3,19 @@
   align-items: center;
   display: flex;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   position: fixed;
   z-index: 50;
   outline: none;
   background:  rgb(227, 227, 227);
   margin-top: 12rem;
   border-radius: 30px;
-  box-shadow: 8px 8px 8px 8px rgba(162, 162, 162, 0.2), -8px 8px 8px 8px rgba(162, 162, 162, 0.2);
 }
 
 .modalWrapper{
   height:100%;
   width: 80vw;
   position: relative;
-
-
 }
 
 .modalContent{
@@ -30,6 +27,8 @@
   height: 100%;
   padding-top: 8px;
   outline: none;
+  box-shadow: 8px 8px 8px 8px rgba(162, 162, 162, 0.2), -8px 8px 8px 8px rgba(162, 162, 162, 0.2);
+
 }
 
 .modalTopBar{
@@ -72,4 +71,17 @@
 .bodyText{
   width: 80ch;
   color: black;
+}
+
+.modalButtonContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.modalButton{
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
