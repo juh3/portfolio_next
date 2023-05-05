@@ -1,0 +1,48 @@
+.app__about_page {
+  min-height: 100vh;
+  margin-top: 64px;
+  h2 {
+    font-size: 48px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    margin-left: 140px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+    margin-left: 168px;
+    margin-top: 28px;
+    p {
+      font-family: 'Montserrat', sans serif;
+      font-size: 18px;
+      width: 75ch;
+      line-height: 1.5em;
+      margin-top: 12px;
+    }
+  }
+  .geometry {
+    display: flex;
+    margin-top: 38px;
+    .line {
+      width: 1200px;
+      height: 2px;
+      background-color: black;
+      position: relative;
+      bottom: 2px;
+      margin-top: 48px;
+    }
+
+    .ellipse {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: #e3c93c;
+      z-index: 2;
+      margin-left: 18px;
+    }
+  }
+}

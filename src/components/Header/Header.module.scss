@@ -1,0 +1,102 @@
+.app__header_style {
+  display: flex;
+  background-color: rgb(221, 221, 219);
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: 10rem;
+
+  .left {
+    flex: 0.5;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-top: 32px;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .greeting {
+        font-family: 'Raleway', sans serif;
+        margin-bottom: 0.12em;
+        color: black;
+      }
+      .name {
+        font-family: 'Raleway', sans serif;
+        margin-bottom: 0.12em;
+        color: black;
+      }
+      .interests {
+        margin-left: 12px;
+        margin-top: 0.72em;
+        font-family: 'Raleway', sans serif;
+        letter-spacing: 0.12em;
+        color: black;
+        #span {
+          line-height: 64px;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 0.5;
+    align-items: center;
+    justify-content: right;
+    padding-top: 16px;
+
+    .picturediv {
+      width: 80%;
+      height: 80%;
+      position: relative;
+    }
+    .imgContainer {
+      position: absolute;
+      background-image: url('../../../public/juhaplaceholder.jpg');
+      background-size: contain;
+      width: 80%;
+      height: 80%;
+      background-position: center center; /* Center the image */
+      border-radius: 12px;
+      margin: auto;
+      background-repeat: no-repeat;
+      z-index: 3;
+    }
+    .imgBackground_1 {
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      background-color: rgb(21, 43, 168);
+      z-index: 2;
+      border-radius: 12px;
+      /*bottom: 18%;
+      right: 18%;*/
+    }
+    .imgBackground_2 {
+      background-color: rgb(99, 110, 170);
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      z-index: 2;
+      border-radius: 12px;
+      /*bottom: 15%;
+      right: 15%;*/
+    }
+  }
+}
+
+#h1 {
+  font-size: 48px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+}
+
+#h3 {
+  font-size: 32px;
+
+  #span {
+    font-size: inherit;
+    color: navy;
+  }
+}

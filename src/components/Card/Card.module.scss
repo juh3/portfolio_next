@@ -1,0 +1,28 @@
+.card {
+  margin-left: 28px;
+  width: 200px;
+  height: 120px;
+  border: 1px solid black;
+  border-radius: 8%;
+  box-shadow: 4px 2px 4px rgba(94, 93, 93, 0.9);
+  cursor: pointer;
+  .card_image {
+    width: 200px;
+    height: 120px;
+
+    img {
+      width: inherit;
+      height: inherit;
+      border-radius: 8% 8% 8% 8%;
+      object-fit: fill;
+    }
+  }
+  .description {
+    margin-top: 12px;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 0 0px #000000;
+  transition-duration: 0.5s;
+}

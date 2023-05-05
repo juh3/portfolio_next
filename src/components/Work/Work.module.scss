@@ -1,0 +1,19 @@
+
+.work_container {
+  background-color: bisque;
+  width: 100%;
+  padding-top: 48px;
+  min-height: 100vh;
+  h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans serif;
+    margin-bottom: 32px;
+    color: black
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+}
