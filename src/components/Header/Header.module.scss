@@ -5,7 +5,6 @@
   min-height: 100vh;
   overflow-x: hidden;
   padding-top: 10rem;
-
   .left {
     flex: 0.5;
     flex-direction: column;
@@ -16,14 +15,18 @@
     .wrapper {
       display: flex;
       flex-direction: column;
+      margin-left: 18rem;
 
       .greeting {
         font-family: 'Raleway', sans serif;
         margin-bottom: 0.12em;
         color: black;
+        font-size: 64px;
+
       }
       .name {
         font-family: 'Raleway', sans serif;
+        font-size: 64px;
         margin-bottom: 0.12em;
         color: black;
       }
@@ -33,6 +36,7 @@
         font-family: 'Raleway', sans serif;
         letter-spacing: 0.12em;
         color: black;
+        font-size: 32px;
         #span {
           line-height: 64px;
         }
@@ -43,45 +47,43 @@
   .right {
     flex: 0.5;
     align-items: center;
-    justify-content: right;
     padding-top: 16px;
 
-    .picturediv {
-      width: 80%;
-      height: 80%;
+    .card{
+      border-radius: 8px;
+      padding: 20px;
+      max-width: max-content;
+    }
+    .squarecards{
+      margin-bottom: 20px;
       position: relative;
+      width: 380px;
+      height: 400px;
     }
-    .imgContainer {
+    .card_cover{
       position: absolute;
-      background-image: url('../../../public/juhaplaceholder.jpg');
-      background-size: contain;
-      width: 80%;
-      height: 80%;
-      background-position: center center; /* Center the image */
-      border-radius: 12px;
-      margin: auto;
-      background-repeat: no-repeat;
       z-index: 3;
+      width: 380px;
+      height: 400px;
+      border-radius: 8px;
     }
-    .imgBackground_1 {
+    .card_back_one{
       position: absolute;
-      width: 80%;
-      height: 80%;
-      background-color: rgb(21, 43, 168);
-      z-index: 2;
-      border-radius: 12px;
-      /*bottom: 18%;
-      right: 18%;*/
+      width: 380px;
+      height: 400px;
+      z-index:1;
+      border-radius: 8px;
+      background-color: azure;
     }
-    .imgBackground_2 {
-      background-color: rgb(99, 110, 170);
+    .card-back-two{
       position: absolute;
-      width: 80%;
-      height: 80%;
-      z-index: 2;
-      border-radius: 12px;
-      /*bottom: 15%;
-      right: 15%;*/
+      width: 380px;
+      height: 400px;
+      z-index:1;
+      left:0;
+      bottom: 0;
+      border-radius: 8px;
+      background-color: bisque;
     }
   }
 }

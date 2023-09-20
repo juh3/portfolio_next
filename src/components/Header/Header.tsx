@@ -3,6 +3,7 @@ import styles from './Header.module.scss'
 import { motion } from 'framer-motion'
 import { init } from 'ityped'
 import juhaplaceholder from '../public/juhaplaceholder.jpg'
+import Image from 'next/image'
 
 const Header = () => {
   const textRef = useRef<HTMLSpanElement>(null)
@@ -21,31 +22,6 @@ const Header = () => {
     },
   }
 
-  const imgContainer = {
-    initial: { left: '0%', top: '0%' },
-    hover: {
-      left: 0,
-      top: 0,
-      transition: { duration: 1, ease: 'easeOut' },
-    },
-  }
-
-  const imgBackground_1 = {
-    initial: { bottom: '0%', right: '0%' },
-    hover: {
-      left: 16,
-      top: 16,
-      transition: { duration: 1, ease: 'easeOut' },
-    },
-  }
-  const imgBackground_2 = {
-    initial: { bottom: '0%', right: '0%' },
-    hover: {
-      left: 32,
-      top: 16,
-      transition: { duration: 1, ease: 'easeOut' },
-    },
-  }
 
   useEffect(() => {
     if (!textRef.current) {
@@ -64,19 +40,33 @@ const Header = () => {
     } )
   }, [])
 
+  const card = {
+    initial: { backgroundColor: "#000000"},
+    hover: { backgroundColor: "#1C1C1C", transition: {ease: "easeIn"}}
+  }
+  const cover = {
+    initial: { left: 0, bottom: 0},
+    hover: { left: 32, bottom: 32}
+
+  }
+  const cover2 = {
+    initial: { left: 0, bottom: 0},
+    hover: { left: 16, bottom: 16}
+
+  }
   return (
     <div className={styles.app__header_style} id="Home">
       <div className={styles.left}>
         <div className={styles.wrapper}>
           <motion.div
-            variant={welcometext}
+            variants={welcometext}
             whileInView={welcometext.whileInView}
           >
             <h1 className={styles.greeting}> Hey!</h1>
           </motion.div>
 
           <motion.div
-            variant={welcomename}
+            variants={welcomename}
             whileInView={welcomename.whileInView}
             style={{ padding: '0.1rem' }}
           >
@@ -91,30 +81,14 @@ const Header = () => {
       </div>
 
       <div className={styles.right}>
-        <div className={styles.picturediv}>
-          <motion.div
-            layout
-            className={styles.imgContainer}
-            variant={imgContainer}
-            initial={imgContainer.initial}
-            whileHover={imgContainer.hover}
-          ></motion.div>
-          <motion.div
-            layout
-            className={styles.imgBackground_1}
-            variant={imgBackground_1}
-            initial={imgBackground_1.initial}
-            whileHover={imgBackground_1.hover}
-          ></motion.div>
-          <motion.div
-            layout
-            className={styles.imgBackground_2}
-            variant={imgBackground_2}
-            initial={imgBackground_2.initial}
-            whileHover={imgBackground_2.hover}
-          ></motion.div>
+        <div className={styles.card}>
+          <div className={styles.squarecards}>
+          <motion.img src = '/public/juhaplaceholder.jpg' className={styles.card_cover} variants={card} initial = "initial" whileHover = "hover"></motion.img>
+          <motion.div className={styles.card_back_one}></motion.div>
+          <motion.div className={styles.card_back_two}></motion.div>
+          </div>
         </div>
-      </div>
+        </div>
     </div>
   )
 }

@@ -3,6 +3,7 @@ import styles from './Modal.module.scss'
 import {AiOutlineClose} from 'react-icons/ai'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import Button from '../Button/Button'
 
 interface ModalProps{
   isOpen: Boolean
@@ -31,6 +32,10 @@ const Modal: React.FC<ModalProps> = ({
       onClose()
     }, 300)
   }, [onClose])
+
+  if(!isOpen){
+    return null
+  }
   return (
     
     <div className={styles.modalContainer}>
@@ -60,7 +65,7 @@ const Modal: React.FC<ModalProps> = ({
             </div>
 
             <div className = {styles.modalButtonContainer}>
-              <button className={styles.modalButton}>To the site</button>
+              <Button cta = "To the Site" primary />
             </div>
             <div>
               <hr style={{marginTop: '8px', marginBottom: '24px'}}/>

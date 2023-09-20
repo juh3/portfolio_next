@@ -1,0 +1,15 @@
+.galleryContainer{
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.galleryWrapper{
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+}

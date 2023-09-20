@@ -14,7 +14,7 @@
   position: fixed;
   z-index: 21;
   opacity: 0.9;
-  border-bottom: 1px solid rgb(216, 215, 215);
+  border-bottom: 1px solid rgb(199, 197, 197);
 }
 
 .app__navbar_links {
@@ -42,9 +42,9 @@
     display: inline-block;
     position: relative;
     color: rgb(0, 0, 0);
-    font-weight: 600;
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    font-family: 'Jetbrains', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.15s ease-in-out;

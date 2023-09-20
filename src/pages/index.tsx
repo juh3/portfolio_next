@@ -9,6 +9,7 @@ import Footer from '@/components/Footer/Footer'
 import Work from '@/components/Work/Work'
 import Modal from '@/components/Modal/Modal'
 import RootModal from '@/components/Modal/RootModal'
+import Gallery from '@/components/Gallery/Gallery'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
           <About/>
           <RootModal/>
           <Work/>
+          <Gallery/>
           <Footer/>
       </main>
     </>
