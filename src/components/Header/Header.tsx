@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { init } from 'ityped'
 import juhaplaceholder from '../public/juhaplaceholder.jpg'
 import Image from 'next/image'
+import {AiOutlineGithub} from 'react-icons/ai'
+import { IconContext } from "react-icons";
 
 const Header = () => {
     const textRef = useRef<HTMLSpanElement>(null)
@@ -22,6 +24,13 @@ const Header = () => {
         },
     }
 
+    const handleIconClick = (name:string) => {
+        switch(name){
+            case("github"):
+                window.open("https://github.com/juh3", '_blank')
+                break;
+        }
+    }
     useEffect(() => {
         if (!textRef.current) {
             return
@@ -68,8 +77,8 @@ const Header = () => {
         whileInView: {
             transition: {
                 ease: 'easeInOut',
-                duration: 5,
-                repeatDelay: 2,
+                duration: 4,
+                repeatDelay: 1,
                 repeat: Infinity,
             },
         },
@@ -123,6 +132,11 @@ const Header = () => {
                         ></motion.div>
                     </motion.div>
                 </motion.div>
+                <div>
+                    <IconContext.Provider value={{color:"black", className:styles.icon}}>
+                        <AiOutlineGithub onClick={() => handleIconClick("github")}/>
+                    </IconContext.Provider>
+                </div>
             </div>
         </div>
     )

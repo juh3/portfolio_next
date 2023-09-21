@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className={styles.app__navbar}>
       <ul className={styles.app__navbar_links}>
-        {['Home', 'About', 'Work', 'Skills', 'Contact'].map((object) => (
+        {['Home', 'About', 'Projects', 'Gallery', 'Contact'].map((object) => (
           <li key={`link-${object}`}>
             <div />
             <a href={`#${object}`}>{object}</a>

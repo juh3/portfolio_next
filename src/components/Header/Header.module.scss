@@ -55,7 +55,7 @@
     padding-top: 16px;
 
     .card {
-      border-radius: 8px;
+      border-radius: 12%;
       padding: 20px;
       width: max-content;
     }
@@ -64,21 +64,21 @@
       position: relative;
       width: 376px;
       height: 376px;
-      border-radius: 8px;
+      border-radius: 12%;
     }
     .card_cover {
       position: absolute;
       z-index: 4;
       width: 356px;
       height: 356px;
-      border-radius: 8px;
+      border-radius: 12%;
     }
     .card_back_one {
       position: absolute;
       width: 356px;
       height: 356px;
       z-index: 3;
-      border-radius: 8px;
+      border-radius: 12%;
       background-color: #c2b7a1;
     }
     .card_back_two {
@@ -88,9 +88,21 @@
       z-index: 2;
       left: 0;
       bottom: 0;
-      border-radius: 8px;
+      border-radius: 12%;
       background-color: rgb(150, 150, 68);
     }
+  }
+  .icon {
+    cursor: pointer;
+    width: 62px;
+    height: 62px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+  .icon:hover {
+    background-color: #e3e3e3;
+    transition: 0.2s;
   }
 }
 
