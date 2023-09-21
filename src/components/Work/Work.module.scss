@@ -7,19 +7,25 @@
   width: 100vw;
   min-height: 100vh;
   padding-bottom: 64px;
-  section {
+  .marquee {
+    position: relative;
+    width: 140vw;
     padding-top: 8rem;
     padding-bottom: 8rem;
-    .parallax,
-    .scroller,
-    span {
-      font-family:
-        'Jetbrains mono',
-        sans serif;
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 64px;
-      color: rgb(40, 39, 39);
+    overflow: hidden;
+    height: 206px;
+    .track {
+      position: absolute;
+      white-space: no-wrap;
+      h1 {
+        font-family:
+          'Jetbrains mono',
+          sans serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 64px;
+        color: rgb(40, 39, 39);
+      }
     }
   }
   .work_wrapper {

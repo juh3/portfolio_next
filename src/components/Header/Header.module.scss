@@ -92,17 +92,37 @@
       background-color: rgb(150, 150, 68);
     }
   }
-  .icon {
-    cursor: pointer;
-    width: 62px;
-    height: 62px;
-    border: 1px solid black;
-    border-radius: 50%;
-    background-color: #ffffff;
-  }
-  .icon:hover {
-    background-color: #e3e3e3;
-    transition: 0.2s;
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .button {
+      margin-left: 12px;
+      .icon {
+        position: absolute;
+        cursor: pointer;
+        width: 62px;
+        height: 62px;
+        border: 1px solid rgb(211, 211, 211);
+        border-radius: 25%;
+        background-color: #e9e9e9;
+        z-index: 3;
+      }
+      .button_layer {
+        position: relative;
+        width: 62px;
+        height: 62px;
+        border-radius: 25%;
+        bottom: -8px;
+        z-index: 2;
+        background-color: rgb(150, 150, 68);
+      }
+      .icon:hover {
+        background-color: #d8d8d8;
+        transition: 0.5s;
+        transform: translateY(6px);
+      }
+    }
   }
 }
 

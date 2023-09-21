@@ -7,9 +7,8 @@ import Header from '@/components/Header/Header'
 import About from '@/components/About/About'
 import Footer from '@/components/Footer/Footer'
 import Work from '@/components/Work/Work'
-import Modal from '@/components/Modal/Modal'
-import RootModal from '@/components/Modal/RootModal'
 import Gallery from '@/components/Gallery/Gallery'
+import Music from '@/components/Music/Music'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -22,13 +21,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-          <Navbar/>
-          <Header />
-          <About/>
-          <RootModal/>
-          <Work/>
-          <Gallery/>
-          <Footer/>
+        <Navbar />
+        <Header />
+        <About />
+        <Music />
+        <Work />
+        <Gallery />
+        <Footer />
       </main>
     </>
   )
