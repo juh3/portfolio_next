@@ -1,19 +1,28 @@
-
 .work_container {
-  background-color: bisque;
-  width: 100%;
-  padding-top: 48px;
-  min-height: 100vh;
-  h1 {
-    display: flex;
-    justify-content: center;
-    font-family: 'Raleway', sans serif;
-    margin-bottom: 32px;
-    color: black
-  }
-}
-
-.projects {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(211, 85, 7);
+  width: 100vw;
+  min-height: 100vh;
+  .work_wrapper {
+    display: flex;
+    .work_h1 {
+      display: flex;
+      float: right;
+      font-family:
+        'Jetbrains mono',
+        sans serif;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 64px;
+      color: rgb(40, 39, 39);
+    }
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+  }
 }

@@ -44,7 +44,7 @@ const Header = () => {
             left: [0, 32, 0],
             bottom: [0, 32, 0],
             transition: {
-                ease: 'easeInOut',
+                ease: 'easeOut',
                 duration: 5,
                 repeatDelay: 2,
                 repeat: Infinity,
@@ -52,11 +52,11 @@ const Header = () => {
         },
     }
     const cover2 = {
-        whileInView: {
+        whileInView: {  
             left: [0, 16, 0],
             bottom: [0, 16, 0],
             transition: {
-                ease: 'easeInOut',
+                ease: 'easeOut',
                 duration: 5,
                 repeatDelay: 2,
                 repeat: Infinity,
