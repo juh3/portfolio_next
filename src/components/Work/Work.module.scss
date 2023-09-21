@@ -6,11 +6,12 @@
   background-color: rgb(211, 85, 7);
   width: 100vw;
   min-height: 100vh;
-  .work_wrapper {
-    display: flex;
-    .work_h1 {
-      display: flex;
-      float: right;
+  section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    .parallax,
+    .scroller,
+    span {
       font-family:
         'Jetbrains mono',
         sans serif;
@@ -20,9 +21,12 @@
       color: rgb(40, 39, 39);
     }
   }
+  .work_wrapper {
+    display: flex;
+  }
   .projects {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 800px;
   }
 }
