@@ -56,7 +56,8 @@ const Work = () => {
           </h1>
         </motion.div>
       </div>
-      <motion.div className={styles.projects}>
+      <motion.div className={styles.projects} initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}>
         <Card
           title="Ball of Roots"
           image="/ballofroots_frontpage.png"

@@ -58,6 +58,41 @@
       border-radius: 12%;
       padding: 20px;
       width: max-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .button {
+          margin-left: 12px;
+          .icon {
+            position: absolute;
+            cursor: pointer;
+            width: 62px;
+            height: 62px;
+            border: 1px solid rgb(211, 211, 211);
+            border-radius: 25%;
+            background-color: #e9e9e9;
+            z-index: 3;
+          }
+          .button_layer {
+            position: relative;
+            width: 62px;
+            height: 62px;
+            border-radius: 25%;
+            bottom: -8px;
+            z-index: 2;
+            background-color: rgb(150, 150, 68);
+          }
+          .icon:hover {
+            background-color: #d8d8d8;
+            transition: 0.5s;
+            transform: translateY(6px);
+          }
+        }
+      }
     }
     .squarecards {
       margin-bottom: 20px;
@@ -90,38 +125,6 @@
       bottom: 0;
       border-radius: 12%;
       background-color: rgb(150, 150, 68);
-    }
-  }
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    .button {
-      margin-left: 12px;
-      .icon {
-        position: absolute;
-        cursor: pointer;
-        width: 62px;
-        height: 62px;
-        border: 1px solid rgb(211, 211, 211);
-        border-radius: 25%;
-        background-color: #e9e9e9;
-        z-index: 3;
-      }
-      .button_layer {
-        position: relative;
-        width: 62px;
-        height: 62px;
-        border-radius: 25%;
-        bottom: -8px;
-        z-index: 2;
-        background-color: rgb(150, 150, 68);
-      }
-      .icon:hover {
-        background-color: #d8d8d8;
-        transition: 0.5s;
-        transform: translateY(6px);
-      }
     }
   }
 }

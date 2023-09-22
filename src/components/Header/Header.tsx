@@ -132,8 +132,7 @@ const Header = () => {
             ></motion.div>
             <motion.div className={styles.card_back_two}></motion.div>
           </motion.div>
-        </motion.div>
-        <div className={styles.buttons}>
+          <div className={styles.buttons}>
           <div className={styles.button}>
             <IconContext.Provider
               value={{ color: 'black', className: styles.icon }}
@@ -151,6 +150,7 @@ const Header = () => {
             </IconContext.Provider>
           </div>
         </div>
+        </motion.div>
       </div>
     </div>
   )

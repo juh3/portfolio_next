@@ -24,7 +24,7 @@ export default function Home() {
         <Navbar />
         <Header />
         <About />
-        <Music />
+        {/* <Music /> */}
         <Work />
         <Gallery />
         <Footer />
