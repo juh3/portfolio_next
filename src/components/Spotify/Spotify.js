@@ -16,6 +16,7 @@ const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`
 // This function gets the access token so that we can access the API
 
 const getAccessToken = async () => {
+  console.log('hey')
   const response = await fetch(TOKEN_ENDPOINT, {
     method: 'POST',
     headers: {

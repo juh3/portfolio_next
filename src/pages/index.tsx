@@ -9,9 +9,26 @@ import Footer from '@/components/Footer/Footer'
 import Work from '@/components/Work/Work'
 import Gallery from '@/components/Gallery/Gallery'
 import Music from '@/components/Music/Music'
+import useSWR from 'swr'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [topFive, setTopFive] = useState('')
+  const apiUrl = '/api/spotify'
+
+  useEffect(() => {
+    async function fetcher() {
+      const response = await axios.get(`${apiUrl}/top5Songs`)
+      if (response.status === 200) {
+        setTopFive(response.data)
+        console.log(response.data)
+      }
+    }
+    fetcher()
+  }, [])
+
   return (
     <>
       <Head>
@@ -24,7 +41,7 @@ export default function Home() {
         <Navbar />
         <Header />
         <About />
-        {/* <Music /> */}
+        <Music topFive={topFive} />
         <Work />
         <Gallery />
         <Footer />
