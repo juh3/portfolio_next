@@ -1,5 +1,5 @@
 import { getCurrentlyListening } from './helper'
-import { normalizeCurrentlyListening } from '../../utils/normalizeSpotify'
+import { normalizeCurrentlyListening } from '../../../utils/normalizeSpotify'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`

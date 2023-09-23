@@ -88,7 +88,7 @@ const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
         {topFive && (
           <div className={styles.topFive_wrapper}>
             {topFive.map((song) => (
-              <div className={styles.topFive_card} key={song.id}>
+              <div className={styles.topFive_card} key={song.title}>
                 <MusicCard song={song} />
               </div>
             ))}

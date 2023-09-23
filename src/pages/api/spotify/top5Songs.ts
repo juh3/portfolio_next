@@ -1,5 +1,5 @@
 import { getCurrentlyListening } from './helper'
-import { normalizeTop5 } from '../../utils/normalizeSpotify'
+import { normalizeTop5 } from '../../../utils/normalizeSpotify'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { SpotifySong, ParsedSong } from '../../../types/songs'
 const TOP5_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?limit=5&offset=1&time_range=short_term`

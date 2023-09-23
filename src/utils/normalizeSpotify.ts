@@ -1,5 +1,4 @@
-import { type } from 'os'
-export interface SpotifySong {
+interface SpotifySong {
   id: string
   name: string
   album: {
@@ -43,7 +42,7 @@ interface Track {
   }
 }
 
-export const normalizeCurrentlyListening = ({
+const normalizeCurrentlyListening = ({
   is_playing,
   progress_ms,
   item
@@ -75,10 +74,12 @@ interface Song {
   }
 }
 
-export const normalizeTop5 = (entry: SpotifySong) => ({
+const normalizeTop5 = (entry: SpotifySong) => ({
   title: entry.name,
   album: entry.album?.name,
   artist: entry.artists?.map(({ name }) => name).join(', '),
   url: entry.external_urls?.spotify,
   thumbnail: entry.album?.images[0]?.url
 })
+
+export { normalizeCurrentlyListening, normalizeTop5 }
