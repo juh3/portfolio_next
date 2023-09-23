@@ -12,10 +12,11 @@ import Music from '@/components/Music/Music'
 import useSWR from 'swr'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import { ParsedSong } from '../types/songs'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [topFive, setTopFive] = useState('')
+  const [topFive, setTopFive] = useState<ParsedSong[] | string>('')
   const apiUrl = '/api/spotify'
 
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function Home() {
         <Navbar />
         <Header />
         <About />
-        <Music topFive={topFive} />
+        {typeof topFive !== 'string' && <Music topFive={topFive} />}
         <Work />
         <Gallery />
         <Footer />

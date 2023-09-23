@@ -1,8 +1,53 @@
+import { type } from 'os'
+export interface SpotifySong {
+  id: string
+  name: string
+  album: {
+    name: string
+    images: {
+      url: string
+    }[]
+  }
+  artists: {
+    name: string
+  }[]
+  external_urls: {
+    spotify: string
+  }
+  duration_ms: number
+  preview_url: string | null // A URL to a 30-second preview of the song, may be null
+  release_date: string // Release date of the song
+  popularity: number // Popularity score of the song
+  // Add more properties as needed based on your specific requirements
+}
+interface Track {
+  is_playing: string
+  progress_ms: string
+  item: {
+    id: string
+    name: string
+    artists: {
+      name: string
+    }[]
+
+    album: {
+      name: string
+      images: {
+        url: string
+      }[]
+    }
+    external_urls: {
+      spotify: string
+    }
+    duration_ms: number
+  }
+}
+
 export const normalizeCurrentlyListening = ({
   is_playing,
   progress_ms,
   item
-}) => ({
+}: Track) => ({
   id: item.id,
   isPlaying: is_playing,
   title: item.name,
@@ -14,8 +59,23 @@ export const normalizeCurrentlyListening = ({
   duration: item.duration_ms
 })
 
-export const normalizeTop5 = (entry) => ({
-  type: entry.album?.album_type,
+interface Song {
+  name: string
+  album: {
+    name: string
+    images: {
+      url: string
+    }[]
+  }
+  artists: {
+    name: string
+  }[]
+  external_urls: {
+    spotify: string
+  }
+}
+
+export const normalizeTop5 = (entry: SpotifySong) => ({
   title: entry.name,
   album: entry.album?.name,
   artist: entry.artists?.map(({ name }) => name).join(', '),

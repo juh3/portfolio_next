@@ -1,7 +1,7 @@
 import { getCurrentlyListening } from './helper'
 import { normalizeTop5 } from '../../utils/normalizeSpotify'
 import type { NextApiRequest, NextApiResponse } from 'next'
-
+import { SpotifySong, ParsedSong } from '../../../types/songs'
 const TOP5_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?limit=5&offset=1&time_range=short_term`
 export default async function handler(
   req: NextApiRequest,
@@ -17,8 +17,8 @@ export default async function handler(
     return res.status(200).json({ is_playing: false })
   }
   const data = await response.json()
-  const parsedData = []
-  data.items.map((entry) => parsedData.push(normalizeTop5(entry)))
+  const parsedData: ParsedSong[] = []
+  data.items.map((entry: SpotifySong) => parsedData.push(normalizeTop5(entry)))
 
   return res.status(200).json(parsedData)
 }

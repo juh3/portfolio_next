@@ -1,7 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './MusicCard.module.scss'
-const MusicCard = ({ song }) => {
+import { ParsedSong } from '../../types/songs'
+
+const MusicCard = ({ song }: { song: ParsedSong }) => {
   return (
     <div className={styles.music_card}>
       <div className={styles.image_container}>

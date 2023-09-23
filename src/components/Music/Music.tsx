@@ -5,8 +5,9 @@ import MusicCard from '../MusicCard/MusicCard'
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`
 import styles from './Music.module.scss'
 import useSWR from 'swr'
+import { ParsedSong } from '../../types/songs'
 
-const Music = ({ topFive }) => {
+const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
   // const [nowPlaying, setNowPlaying] = useState('')
   // useEffect(() => {
   //   const getAccessToken = async () => {
@@ -48,7 +49,7 @@ const Music = ({ topFive }) => {
   //   getNowPlaying()
   // }, [])
   const apiUrl = '/api/spotify'
-  const [nowPlaying, setNowPlaying] = useState('')
+  const [nowPlaying, setNowPlaying] = useState<ParsedSong | string>('')
   useEffect(() => {
     async function fetcher() {
       const response = await axios.get(`${apiUrl}/currentSong`)
@@ -60,11 +61,10 @@ const Music = ({ topFive }) => {
     const interval = setInterval(fetcher, 20000)
     return () => clearInterval(interval)
   }, [])
-  console.log(topFive)
   return (
     <div className={styles.music_wrapper}>
       <div className={styles.inner}>
-        {nowPlaying?.isPlaying && (
+        {typeof nowPlaying !== 'string' && (
           <div className={styles.now_playing}>
             <h4
               style={{

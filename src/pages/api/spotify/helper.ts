@@ -26,7 +26,7 @@ const getAccessToken = async () => {
   return response.json()
 }
 
-export const getCurrentlyListening = async (endpoint) => {
+export const getCurrentlyListening = async (endpoint: string) => {
   const { access_token: accessToken } = await getAccessToken()
   if (!accessToken) {
     return
