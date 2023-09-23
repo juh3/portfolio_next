@@ -3,7 +3,9 @@
   align-items: center;
   background-color: rgb(221, 221, 219);
   width: 100vw;
-  min-height: 600px;
+  height: fit-content;
+  margin-top: 24px;
+  margin-bottom: 24px;
   .inner {
     display: flex;
     align-items: center;

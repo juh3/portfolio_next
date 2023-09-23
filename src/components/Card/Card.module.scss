@@ -4,7 +4,7 @@
   border: 1px solid black;
   border: none;
   background-color: rgb(241, 238, 231);
-  border-radius: 2px;
+  border-radius: 8px;
   margin-bottom: 48px;
   cursor: pointer;
   .card_overlay {
@@ -20,6 +20,7 @@
       width: inherit;
       height: inherit;
       object-fit: fill;
+      border-radius: 8px 8px 0px 0px;
     }
   }
   .card_description {
@@ -47,4 +48,5 @@
   z-index: 100;
   background-color: rgb(235, 233, 233);
   transition-duration: 0.5s;
+  border-radius: 8px;
 }
