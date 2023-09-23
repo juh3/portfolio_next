@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useCallback } from 'react'
 import styles from './Work.module.scss'
 import Card from '../Card/Card'
 import { useRef } from 'react'
@@ -38,15 +38,25 @@ const Work = () => {
     }
   }
   const controls = useAnimation()
-  const animateMarquee = async () => {
+  const animateMarquee = useCallback(async () => {
     while (true) {
       await controls.start({ x: -100, transition: { duration: 6 } }) // Adjust the distance for your needs
       await controls.start({ x: 0, transition: { duration: 4 } })
     }
-  }
-  React.useEffect(() => {
-    animateMarquee()
-  }, [])
+  }, [controls])
+
+  useEffect(() => {
+    let isMounted = true
+    const startAnimation = async () => {
+      while (isMounted) {
+        await animateMarquee()
+      }
+    }
+    startAnimation()
+    return () => {
+      isMounted = false
+    }
+  }, [animateMarquee])
   return (
     <div className={styles.work_container} id="Projects">
       <div className={styles.marquee}>
@@ -56,8 +66,11 @@ const Work = () => {
           </h1>
         </motion.div>
       </div>
-      <motion.div className={styles.projects} initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}>
+      <motion.div
+        className={styles.projects}
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
+      >
         <Card
           title="Ball of Roots"
           image="/ballofroots_frontpage.png"
