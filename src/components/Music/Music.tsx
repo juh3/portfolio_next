@@ -62,7 +62,7 @@ const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
   return (
     <div className={styles.music_wrapper}>
       <div className={styles.inner}>
-        {typeof nowPlaying !== 'string' && (
+        {typeof nowPlaying !== 'string' && nowPlaying.isPlaying && (
           <motion.div
             className={styles.now_playing}
             initial={{ opacity: 0, y: 60 }}
@@ -98,7 +98,11 @@ const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
         )}
         {topFive && (
           <motion.div
-            className={styles.topFive_wrapper}
+            className={
+              typeof nowPlaying !== 'string' && nowPlaying.isPlaying
+                ? `${styles.topFive_wrapper}`
+                : `${styles.topFive_centered}`
+            }
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0, transition: { delay: 0.07 } }}
           >
@@ -109,7 +113,7 @@ const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
                 marginBottom: '16px'
               }}
             >
-              RECENT TOP 5
+              RECENT TOP 5 SONGS
             </h4>
             {topFive.map((song) => (
               <div className={styles.topFive_card} key={song.title}>

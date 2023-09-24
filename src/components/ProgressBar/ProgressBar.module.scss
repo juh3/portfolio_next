@@ -6,6 +6,10 @@
   box-shadow:
     2px 2px 8px 1px rgba(104, 104, 104, 0.2),
     -2px 0px 8px 1px rgba(104, 104, 104, 0.2);
+  @media (max-width: 500px) {
+    width: 180px;
+    height: 6px;
+  }
   .progressbar_filler {
     height: 100%;
     width: 50px;

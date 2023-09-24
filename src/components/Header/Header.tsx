@@ -10,19 +10,19 @@ import { IconContext } from 'react-icons'
 const Header = () => {
   const textRef = useRef<HTMLSpanElement>(null)
 
-  const welcometext = {
-    whileInView: {
-      x: '200px',
-      transition: { duration: 2, ease: 'easeOut' }
-    }
-  }
+  // const welcometext = {
+  //   whileInView: {
+  //     x: '200px',
+  //     transition: { duration: 2, ease: 'easeOut' }
+  //   }
+  // }
 
-  const welcomename = {
-    whileInView: {
-      x: '200px',
-      transition: { duration: 3, ease: 'easeOut' }
-    }
-  }
+  // const welcomename = {
+  //   whileInView: {
+  //     x: '200px',
+  //     transition: { duration: 3, ease: 'easeOut' }
+  //   }
+  // }
 
   const handleIconClick = (name: string) => {
     switch (name) {
@@ -91,25 +91,19 @@ const Header = () => {
     <div className={styles.app__header_style} id="Home">
       <div className={styles.left}>
         <div className={styles.wrapper}>
-          <motion.div
-            variants={welcometext}
-            whileInView={welcometext.whileInView}
-          >
+          <div>
             <h1 className={styles.greeting}> Hey!</h1>
-          </motion.div>
 
-          <motion.div
-            variants={welcomename}
-            whileInView={welcomename.whileInView}
-            style={{ padding: '0.1rem' }}
-          >
             <h1 className={styles.name}> I am Juha</h1>
-            <h3 className={styles.interests}>
-              {' '}
-              Interested in: <br></br>
-              <span id={styles.span} ref={textRef}></span>{' '}
-            </h3>
-          </motion.div>
+          </div>
+          <h3 className={styles.interests}>
+            Interested in: <br></br>
+          </h3>
+          <span
+            className={styles.interests}
+            id={styles.span}
+            ref={textRef}
+          ></span>
         </div>
       </div>
 
@@ -133,23 +127,25 @@ const Header = () => {
             <motion.div className={styles.card_back_two}></motion.div>
           </motion.div>
           <div className={styles.buttons}>
-          <div className={styles.button}>
-            <IconContext.Provider
-              value={{ color: 'black', className: styles.icon }}
-            >
-              <AiOutlineGithub onClick={() => handleIconClick('github')} />
-              <div className={styles.button_layer}></div>
-            </IconContext.Provider>
+            <div className={styles.button}>
+              <IconContext.Provider
+                value={{ color: 'black', className: styles.icon }}
+              >
+                <AiOutlineGithub onClick={() => handleIconClick('github')} />
+                <div className={styles.button_layer}></div>
+              </IconContext.Provider>
+            </div>
+            <div className={styles.button}>
+              <IconContext.Provider
+                value={{ color: 'black', className: styles.icon }}
+              >
+                <AiOutlineLinkedin
+                  onClick={() => handleIconClick('linkedin')}
+                />
+                <div className={styles.button_layer}></div>
+              </IconContext.Provider>
+            </div>
           </div>
-          <div className={styles.button}>
-            <IconContext.Provider
-              value={{ color: 'black', className: styles.icon }}
-            >
-              <AiOutlineLinkedin onClick={() => handleIconClick('linkedin')} />
-              <div className={styles.button_layer}></div>
-            </IconContext.Provider>
-          </div>
-        </div>
         </motion.div>
       </div>
     </div>

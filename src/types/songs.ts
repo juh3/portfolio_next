@@ -45,6 +45,7 @@ export interface ParsedSong {
   album?: string
   artist?: string
   spotify?: string
+  url: string
   thumbnail?: string
   progress?: string
   duration?: string

@@ -4,6 +4,9 @@
   background-color: rgb(210, 210, 209);
   width: 100vw;
   min-height: 100vh;
+  @media (max-width: 913px) {
+    min-height: max-content;
+  }
   .inner {
     display: flex;
     align-items: center;
@@ -31,7 +34,9 @@
       padding-right: 2rem;
       padding-bottom: 24px;
       margin-bottom: 36px;
-
+      @media (max-width: 648px) {
+        width: 90%;
+      }
       p {
         font-family:
           'Montserrat',
