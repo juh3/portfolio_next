@@ -1,10 +1,11 @@
-.app__navbar {
-  width: 100%;
+.app__navbar,
+.app__navbar_mobile {
+  width: 100vw;
   height: 8%;
   position: absolute;
   overflow-x: hidden;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
   padding: 1rem 2rem;
@@ -16,7 +17,43 @@
   opacity: 0.9;
   border-bottom: 1px solid rgb(199, 197, 197);
 }
+.app__navbar_mobile {
+  border-bottom: none;
+  display: block;
+  z-index: 1;
+  background-color: transparent;
 
+  .mobilenavbar_icon_wrapper {
+    text-align: right;
+  }
+}
+.mobilenavbar_container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 40;
+  div {
+    position: fixed;
+    border: solid;
+    border-width: 1px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 12;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: rgba(233, 247, 235, 1.5);
+    background-size: cover;
+    background-repeat: repeat;
+    height: 80vw;
+  }
+}
 .app__navbar_links {
   align-items: center;
   justify-content: flex-start;
@@ -155,4 +192,9 @@
 
     transition: all 0.3s ease-in-out;
   }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
 }
