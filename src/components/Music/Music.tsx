@@ -1,11 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
-import Image from 'next/image'
 import MusicCard from '../MusicCard/MusicCard'
-const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`
 import styles from './Music.module.scss'
-import useSWR from 'swr'
 import { ParsedSong } from '../../types/songs'
+import { motion } from 'framer-motion'
 
 const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
   // const [nowPlaying, setNowPlaying] = useState('')
@@ -64,8 +62,12 @@ const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
   return (
     <div className={styles.music_wrapper}>
       <div className={styles.inner}>
-        {typeof nowPlaying !== 'string' && (
-          <div className={styles.now_playing}>
+        {typeof nowPlaying !== 'string' && nowPlaying.isPlaying && (
+          <motion.div
+            className={styles.now_playing}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.07 } }}
+          >
             <h4
               style={{
                 color: 'black',
@@ -76,23 +78,49 @@ const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
               LISTENING TO
             </h4>
             <MusicCard song={nowPlaying} />{' '}
-          </div>
+          </motion.div>
         )}
         {!nowPlaying && (
-          <div>
-            <p style={{ color: 'black' }}>
-              Not listening to anything right now!
-            </p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.07 } }}
+          >
+            <h4
+              style={{
+                color: 'black',
+                fontFamily: 'Jetbrains mono, sans-serf',
+                marginBottom: '16px'
+              }}
+            >
+              LISTENING TO
+            </h4>
+          </motion.div>
         )}
         {topFive && (
-          <div className={styles.topFive_wrapper}>
+          <motion.div
+            className={
+              typeof nowPlaying !== 'string' && nowPlaying.isPlaying
+                ? `${styles.topFive_wrapper}`
+                : `${styles.topFive_centered}`
+            }
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.07 } }}
+          >
+            <h4
+              style={{
+                color: 'black',
+                fontFamily: 'Jetbrains mono, sans-serf',
+                marginBottom: '16px'
+              }}
+            >
+              RECENT TOP 5 SONGS
+            </h4>
             {topFive.map((song) => (
               <div className={styles.topFive_card} key={song.title}>
                 <MusicCard song={song} />
               </div>
             ))}
-          </div>
+          </motion.div>
         )}
       </div>
     </div>

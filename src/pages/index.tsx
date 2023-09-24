@@ -9,6 +9,7 @@ import Footer from '@/components/Footer/Footer'
 import Work from '@/components/Work/Work'
 import Gallery from '@/components/Gallery/Gallery'
 import Music from '@/components/Music/Music'
+
 import useSWR from 'swr'
 import axios from 'axios'
 import { useState, useEffect } from 'react'

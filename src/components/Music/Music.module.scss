@@ -3,29 +3,44 @@
   align-items: center;
   background-color: rgb(221, 221, 219);
   width: 100vw;
-  min-height: 600px;
+  height: fit-content;
+  margin-top: 24px;
+  margin-bottom: 24px;
   .inner {
     display: flex;
     align-items: center;
     width: 100%;
 
     flex-direction: row;
+    @media (max-width: 913px) {
+      flex-direction: column;
+    }
     .now_playing {
       display: flex;
       flex-direction: column;
       flex: 0.5;
       justify-content: center;
       align-items: center;
+      @media (max-width: 913px) {
+        padding-bottom: 24px;
+      }
     }
-    .topFive_wrapper {
+    .topFive_wrapper,
+    .topFive_centered {
       display: flex;
       flex: 0.5;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      @media (max-width: 913px) {
+        padding-top: 24px;
+      }
       .topFive_card {
         margin-top: 8px;
       }
+    }
+    .topFive_centered {
+      flex: 1;
     }
   }
 }

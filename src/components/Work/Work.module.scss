@@ -14,6 +14,21 @@
     padding-bottom: 8rem;
     overflow: hidden;
     height: 206px;
+    @media (max-width: 913px) {
+      width: 300%;
+    }
+    @media (max-width: 700px) {
+      width: 200%;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      height: 103px;
+    }
+    @media (max-width: 490px) {
+      width: 300%;
+    }
+    @media (max-width: 351px) {
+      width: 600%;
+    }
     .track {
       position: absolute;
       white-space: no-wrap;
@@ -25,6 +40,12 @@
         font-weight: 500;
         font-size: 64px;
         color: rgb(40, 39, 39);
+        @media (max-width: 900px) {
+          font-size: 32px;
+        }
+        @media (max-width: 451px) {
+          font-size: 28px;
+        }
       }
     }
   }
@@ -35,5 +56,15 @@
     display: flex;
     flex-direction: column;
     width: 800px;
+    @media (max-width: 913px) {
+      margin-top: 24px;
+      width: 500px;
+    }
+    @media (max-width: 520px) {
+      margin-top: 12px;
+
+      width: 90vw;
+      height: auto;
+    }
   }
 }
