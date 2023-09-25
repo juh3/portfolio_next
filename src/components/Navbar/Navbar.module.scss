@@ -1,5 +1,4 @@
-.app__navbar,
-.app__navbar_mobile {
+.app__navbar {
   width: 100vw;
   height: 8%;
   position: absolute;
@@ -18,15 +17,42 @@
   border-bottom: 1px solid rgb(199, 197, 197);
 }
 .app__navbar_mobile {
-  border-bottom: none;
-  display: block;
-  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1123;
   background-color: transparent;
+  position: fixed;
 
   .mobilenavbar_icon_wrapper {
-    text-align: right;
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 1150;
   }
 }
+
+@keyframes slideFromRight {
+  0% {
+    right: -100%; /* Start position below the viewport */
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideToRight {
+  0% {
+    right: 0%;
+    opacity: 1;
+  }
+  100% {
+    right: -100%;
+    opacity: 0;
+  }
+}
+
 .mobilenavbar_container {
   width: 100vw;
   height: 100vh;
@@ -35,37 +61,49 @@
   justify-content: center;
   align-items: center;
   z-index: 40;
-  div {
+
+  .navbar_div,
+  .navbar_div.close {
     position: fixed;
-    border: solid;
     border-width: 1px;
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 12;
+    z-index: 102;
     padding: 1rem;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
     background-color: rgba(233, 247, 235, 1.5);
-    background-size: cover;
-    background-repeat: repeat;
-    height: 80vw;
+    height: 100vh;
+
+    @media (max-width: 1199px) {
+      display: flex;
+      justify-content: center;
+      text-align: left;
+      padding: 0rem;
+      background-color: rgb(216, 216, 216);
+      animation: slideFromRight 0.5s ease-in-out forwards;
+    }
   }
 }
 .app__navbar_links {
+  display: flex;
   align-items: center;
   justify-content: flex-start;
-  display: flex;
   list-style: none;
-  flex: 1;
 
+  @media (max-width: 1199px) {
+    flex-direction: column;
+  }
   li {
     margin: 0 1rem;
     cursor: pointer;
     flex-direction: column;
     padding: 0 1rem;
+    @media (max-width: 1199px) {
+      margin-top: 48px;
+    }
   }
 
   div {
@@ -78,13 +116,16 @@
   a {
     display: inline-block;
     position: relative;
-    color: rgb(0, 0, 0);
+    color: rgb(26, 26, 26);
     font-weight: 500;
     font-size: 24px;
-    font-family: 'Jetbrains', sans-serif;
+    font-family: 'Jetbrains mono', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.15s ease-in-out;
+    @media (max-width: 1199px) {
+      font-size: 48px;
+    }
 
     &::after {
       content: '';

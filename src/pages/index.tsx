@@ -45,7 +45,7 @@ export default function Home() {
         <About />
         {typeof topFive !== 'string' && <Music topFive={topFive} />}
         <Work />
-        <Gallery />
+        {/* <Gallery /> */}
         <Footer />
       </main>
     </>
