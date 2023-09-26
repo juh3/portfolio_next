@@ -18,6 +18,5 @@ export default async function handler(
     return res.status(200).json({ is_playing: false })
   }
   const data = await response.json()
-  console.log('this is the data', data)
   return res.status(200).json(normalizeCurrentlyListening(data))
 }
