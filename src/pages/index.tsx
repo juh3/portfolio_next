@@ -25,7 +25,6 @@ export default function Home() {
       const response = await axios.get(`${apiUrl}/top5Songs`)
       if (response.status === 200) {
         setTopFive(response.data)
-        console.log(response.data)
       }
     }
     fetcher()

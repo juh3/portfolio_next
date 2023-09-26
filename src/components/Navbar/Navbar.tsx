@@ -1,5 +1,4 @@
 'use client'
-
 import {  useEffect, useState } from 'react'
 import styles from './Navbar.module.scss'
 import useWindowSize from '../../utils/windowDimensions'
@@ -50,7 +49,7 @@ const Navbar = () => {
     return (
       <div className={styles.mobilenavbar_icon_wrapper}>
         <IconContext.Provider
-          value={{ color: 'black', className: styles.icon }}
+          value={{className: styles.icon }}
         >
           {!open ? (
             <RxHamburgerMenu onClick={() => setOpen(!open)} />
@@ -75,7 +74,7 @@ const Navbar = () => {
   }
   else{
     return(
-      <nav className={styles.app__navbar_mobile}>
+      <nav className={open ?styles.app__navbar_mobile_open:styles.app__navbar_mobile}>
           <MobileNavbar />
           <MobileMenuBurger />
 

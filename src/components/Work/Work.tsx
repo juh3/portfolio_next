@@ -57,6 +57,7 @@ const Work = () => {
       isMounted = false
     }
   }, [animateMarquee])
+  
   return (
     <div className={styles.work_container} id="Projects">
       <div className={styles.marquee}>

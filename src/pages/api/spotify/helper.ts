@@ -22,7 +22,6 @@ const getAccessToken = async () => {
       refresh_token
     })
   })
-  console.log(response)
   return response.json()
 }
 

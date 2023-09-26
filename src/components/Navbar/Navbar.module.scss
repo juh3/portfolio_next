@@ -16,10 +16,10 @@
   opacity: 0.9;
   border-bottom: 1px solid rgb(199, 197, 197);
 }
-.app__navbar_mobile {
-  width: 100vw;
-  height: 100vh;
-  z-index: 1123;
+.app__navbar_mobile,
+.app__navbar_mobile_open {
+  width: 32px;
+  height: 32px;
   background-color: transparent;
   position: fixed;
 
@@ -27,10 +27,15 @@
     position: fixed;
     top: 32px;
     right: 32px;
-    z-index: 1150;
+    width: 32px;
+    z-index: 123456789;
   }
 }
-
+.app__navbar_mobile_open {
+  z-index: 1123;
+  width: 100vw;
+  height: 100vh;
+}
 @keyframes slideFromRight {
   0% {
     right: -100%; /* Start position below the viewport */
@@ -54,13 +59,12 @@
 }
 
 .mobilenavbar_container {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 40;
+  z-index: 5;
 
   .navbar_div,
   .navbar_div_close {
@@ -83,11 +87,7 @@
       text-align: left;
       padding: 0rem;
       background-color: rgb(216, 216, 216);
-      animation: slideFromRight 0.5s ease-in-out forwards;
     }
-  }
-  .navbar_div_close {
-    animation: slideToRight 0.5s ease-in-out forwards;
   }
 }
 .app__navbar_links {
@@ -241,4 +241,6 @@
 .icon {
   width: 32px;
   height: 32px;
+  color: black;
+  z-index: 9876543567890;
 }
