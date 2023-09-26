@@ -10,7 +10,7 @@ import { motion  } from 'framer-motion'
 const NavbarLinks = ({setOpen}:{setOpen: React.Dispatch<React.SetStateAction<boolean>>}) => {
   return (
     <ul className={styles.app__navbar_links}>
-      {['Home', 'About', 'Projects', 'Gallery', 'Contact'].map((object) => (
+      {['Home', 'About', 'Projects'].map((object) => (
         <li key={`link-${object}`}>
           <div />
           <a href={`#${object}`} onClick={() => setOpen(!open)}>{object}</a>
