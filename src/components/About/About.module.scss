@@ -45,6 +45,9 @@
         color: black;
         line-height: 1.5em;
         margin-top: 24px;
+        @media (max-width: 648px) {
+          font-size: 18px;
+        }
       }
     }
   }

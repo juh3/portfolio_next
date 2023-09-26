@@ -7,7 +7,6 @@ const MusicCard = ({ song }: { song: ParsedSong }) => {
   const handleNavigation = (url: string): void => {
     window.open(url, '_blank', 'noopener, noreferrer')
   }
-  console.log(song.spotify)
   return (
     <div
       className={styles.music_card}
