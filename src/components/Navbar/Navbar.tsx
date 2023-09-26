@@ -1,11 +1,13 @@
-import { SetStateAction, useEffect, useState } from 'react'
+'use client'
+
+import {  useEffect, useState } from 'react'
 import styles from './Navbar.module.scss'
 import useWindowSize from '../../utils/windowDimensions'
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx'
 import { IconContext } from 'react-icons'
-import { motion, useAnimation,AnimatePresence  } from 'framer-motion'
+import { motion  } from 'framer-motion'
 
-const NavbarLinks = ({setOpen}) => {
+const NavbarLinks = ({setOpen}:{setOpen: React.Dispatch<React.SetStateAction<boolean>>}) => {
   return (
     <ul className={styles.app__navbar_links}>
       {['Home', 'About', 'Projects', 'Gallery', 'Contact'].map((object) => (
@@ -19,23 +21,26 @@ const NavbarLinks = ({setOpen}) => {
 }
 const Navbar = () => {
   const size = useWindowSize().width
-  const controls = useAnimation()
   const [open, setOpen] = useState(false)
-  const [navBarTransparent, setnavBarTransparent] = useState(true)
 
   
   const MobileNavbar = () => {
-    console.log("open?", open)
       return (
-        <div
-          className={`${styles.mobilenavbar_container} ${open ? 'open': 'hidden'}`}>
-          {open &&   <div className={styles.navbar_div}
-          >
-            <NavbarLinks setOpen = {setOpen}/>
+
+        <motion.div
+          className={styles.mobilenavbar_container}
+          initial = {{opacity:0, right:-100}}
+            animate = {{opacity: 1, right:0, transition:{duration: 0.2}}}
+            exit = {{opacity: 0, right: -100, transition:{duration:0.2}}}>
+              {open && (
+          <div key="menu" 
+            className={styles.navbar_div}
+            >
+              <NavbarLinks setOpen = {setOpen}/>
           
-          </div>}
-        
-        </div>
+          </div>)}
+        </motion.div>
+
       )
     }
   
@@ -50,7 +55,7 @@ const Navbar = () => {
           {!open ? (
             <RxHamburgerMenu onClick={() => setOpen(!open)} />
           ) : (
-            <RxCross1 onClick={() => setOpen(!open)} />
+            <RxCross1 onClick={() =>setOpen(!open)} />
           )}
         </IconContext.Provider>
       </div>
