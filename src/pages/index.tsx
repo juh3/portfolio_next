@@ -42,8 +42,8 @@ export default function Home() {
         <Navbar />
         <Header />
         <About />
-        {typeof topFive !== 'string' && <Music topFive={topFive} />}
         <Work />
+        {typeof topFive !== 'string' && <Music topFive={topFive} />}
         {/* <Gallery /> */}
         {/* <Footer /> */}
       </main>
