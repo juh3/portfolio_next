@@ -7,7 +7,6 @@
   width: 100vw;
   min-height: 100vh;
   padding-bottom: 64px;
-  pointer-events: none;
   .marquee {
     position: relative;
     width: 140vw;
@@ -15,6 +14,8 @@
     padding-bottom: 8rem;
     overflow: hidden;
     height: 206px;
+    pointer-events: none;
+
     @media (max-width: 913px) {
       width: 300%;
     }
@@ -63,9 +64,7 @@
     }
     @media (max-width: 520px) {
       margin-top: 12px;
-
       width: 90vw;
-      height: auto;
     }
   }
 }

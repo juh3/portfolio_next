@@ -4,7 +4,6 @@
   border: none;
   background-color: rgb(241, 238, 231);
   border-radius: 8px;
-  margin-bottom: 48px;
   cursor: pointer;
 
   .card_overlay {
@@ -48,6 +47,9 @@
         font-size: 12px;
       }
     }
+  }
+  &:not(:last-child) {
+    margin-bottom: 48px;
   }
 }
 .card_overlay:hover {
