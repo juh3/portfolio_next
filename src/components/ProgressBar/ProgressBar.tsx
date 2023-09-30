@@ -26,7 +26,7 @@ const ProgressBar: React.FC<ProgressBarInterface> = ({
     const delay = 1000
 
     const interval = setInterval(() => {
-      if (currentProgressRef.current < duration) {
+      if (currentProgressRef.current < duration - 1000) {
         const newProgress = currentProgressRef.current + delay
         setCurrentProgress(newProgress)
         currentProgressRef.current = newProgress // Update ref with new value
