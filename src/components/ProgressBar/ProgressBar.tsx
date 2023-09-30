@@ -1,44 +1,65 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './ProgressBar.module.scss'
 
 interface ProgressBarInterface {
-  duration: string
-  progress: string
+  duration: number
+  progress: number
 }
 
 const ProgressBar: React.FC<ProgressBarInterface> = ({
   duration,
   progress
 }) => {
-  function millisToMinutesAndSeconds(duration: string) {
-    var minutes = Math.floor(parseInt(duration) / 60000)
-    var seconds = ((parseInt(duration) % 60000) / 1000).toFixed(0)
+  function millisToMinutesAndSeconds(duration: number) {
+    var minutes = Math.floor(duration / 60000)
+    var seconds = ((duration % 60000) / 1000).toFixed(0)
     return minutes + ':' + (parseInt(seconds) < 10 ? '0' : '') + seconds
   }
 
-  const totalTrackTime = millisToMinutesAndSeconds(duration)
-  const nowTime = millisToMinutesAndSeconds(progress)
+  const [currentProgress, setCurrentProgress] = useState(progress)
+  const currentProgressRef = useRef(progress)
 
-  const width_completed = (parseInt(progress) / parseInt(duration)) * 100
-  const filler = {
-    height: '100%',
-    width: `${width_completed}%`,
-    backgroundColor: 'bisque',
-    borderRadius: 'inherit'
-  }
+  useEffect(() => {
+    setCurrentProgress(progress)
+    currentProgressRef.current = progress
+
+    const delay = 1000
+
+    const interval = setInterval(() => {
+      if (currentProgressRef.current < duration) {
+        const newProgress = currentProgressRef.current + delay
+        setCurrentProgress(newProgress)
+        currentProgressRef.current = newProgress // Update ref with new value
+      }
+    }, delay)
+    return () => clearInterval(interval)
+  }, [duration, progress])
+
+  const totalTrackTime = millisToMinutesAndSeconds(duration)
+  const width_completed = (currentProgress / duration) * 100
+
   return (
     <div
       style={{
         display: 'flex',
         flexDirection: 'row',
-        marginTop: '8px'
+        marginTop: '8px',
+        alignItems: 'center'
       }}
     >
       <p className={styles.timestamp} style={{ paddingRight: '4px' }}>
-        {nowTime}
+        {millisToMinutesAndSeconds(currentProgress)}
       </p>
       <div className={styles.progressbar_container}>
-        <div style={filler}>
+        <div
+          style={{
+            height: '100%',
+            backgroundColor: 'rgb(211, 85, 7)',
+            borderRadius: 'inherit',
+            transition: 'width 0.5s',
+            width: width_completed < 100 ? `${width_completed}%` : '100%'
+          }}
+        >
           <span></span>
         </div>
       </div>
