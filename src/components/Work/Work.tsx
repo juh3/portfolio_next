@@ -57,7 +57,7 @@ const Work = () => {
       isMounted = false
     }
   }, [animateMarquee])
-  
+
   return (
     <div className={styles.work_container} id="Projects">
       <div className={styles.marquee}>
@@ -72,30 +72,38 @@ const Work = () => {
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
       >
-        <Card
-          title="Ball of Roots"
-          image="/ballofroots_frontpage.png"
-          description="My first project after completing the FullStack Open course. A plant shop. Stack included React, Node, and MongoDB"
-          link="https://ballofroots.com/"
-        />
-        <Card
-          title="Kylän Keittiö"
-          image="/ballofroots_frontpage.png"
-          description="Part of the dev team. I did the design in Figma and did 50% of the frontend. T3 stack was used."
-          link="https://kylankeittio.fi/"
-        />
-        <Card
-          title="Kinopoli"
-          image="/kinopoli_frontpage.png"
-          description="I was part of the dev team focusing on the frontend. A reservation site for the movietheater Kinopoli. Stack included React, Next, Vite, SCSS."
-          link="https://kinopoli.fi/"
-        />
-        <Card
-          title="ApproKartat"
-          image="/ballofroots_frontpage.png"
-          description="My first project"
-          link="https://ballofroots.com/"
-        />
+        <div style={{ marginBottom: '48px' }}>
+          <Card
+            title="Ball of Roots"
+            image="/ballofroots_frontpage.png"
+            description="My first project after completing the FullStack Open course. A plant shop. Stack included React, Node, and MongoDB"
+            link="https://ballofroots.com/"
+          />
+        </div>
+        <div style={{ marginBottom: '48px' }}>
+          <Card
+            title="Kylän Keittiö"
+            image="/ballofroots_frontpage.png"
+            description="Part of the dev team. I did the design in Figma and did 50% of the frontend. T3 stack was used."
+            link="https://kylankeittio.fi/"
+          />
+        </div>
+        <div style={{ marginBottom: '48px' }}>
+          <Card
+            title="Kinopoli"
+            image="/kinopoli_frontpage.png"
+            description="I was part of the dev team focusing on the frontend. A reservation site for the movietheater Kinopoli. Stack included React, Next, Vite, SCSS."
+            link="https://kinopoli.fi/"
+          />
+        </div>
+        <div style={{ marginBottom: '48px' }}>
+          <Card
+            title="ApproKartat"
+            image="/ballofroots_frontpage.png"
+            description="My first project"
+            link="https://ballofroots.com/"
+          />
+        </div>
       </motion.div>
     </div>
   )
