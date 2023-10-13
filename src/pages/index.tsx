@@ -1,16 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/Navbar/Navbar'
 import Header from '@/components/Header/Header'
 import About from '@/components/About/About'
-import Footer from '@/components/Footer/Footer'
 import Work from '@/components/Work/Work'
-import Gallery from '@/components/Gallery/Gallery'
 import Music from '@/components/Music/Music'
+import RootModal from '@/components/Modal/RootModal'
 
-import useSWR from 'swr'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { ParsedSong } from '../types/songs'
@@ -42,6 +39,7 @@ export default function Home() {
         <Navbar />
         <Header />
         <About />
+        <RootModal/>
         <Work />
         {typeof topFive !== 'string' && <Music topFive={topFive} />}
         {/* <Gallery /> */}

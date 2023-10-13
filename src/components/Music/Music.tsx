@@ -40,22 +40,6 @@ const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
             <MusicCard song={nowPlaying} />{' '}
           </motion.div>
         )}
-        {!nowPlaying && (
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.07 } }}
-          >
-            <h4
-              style={{
-                color: 'black',
-                fontFamily: 'Jetbrains mono, sans-serf',
-                marginBottom: '16px'
-              }}
-            >
-              LISTENING TO
-            </h4>
-          </motion.div>
-        )}
         {topFive && (
           <motion.div
             className={

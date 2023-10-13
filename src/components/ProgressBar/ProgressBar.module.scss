@@ -1,13 +1,14 @@
 .progressbar_container {
-  height: 12px;
+  height: 10px;
   width: 220px;
+
   background-color: rgb(219, 218, 218);
   border-radius: 20px;
   box-shadow:
     2px 2px 8px 1px rgba(104, 104, 104, 0.2),
     -2px 0px 8px 1px rgba(104, 104, 104, 0.2);
   @media (max-width: 500px) {
-    width: 180px;
+    width: 170px;
     height: 6px;
   }
 }
