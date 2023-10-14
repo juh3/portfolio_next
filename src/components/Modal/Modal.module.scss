@@ -72,21 +72,43 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 24px;
   margin-bottom: 18px;
 }
 
 .bodyText {
-  font-family:
-    'Montserrat',
-    sans serif;
-  font-weight: 700;
+  color: rgb(23, 23, 23);
+  font-family: 'Montserrat', sans-serif;
+
   max-width: 55ch;
   font-size: 18px;
-  --tw-text-opacity: 1;
-  color: rgb(20 20 20 / var(--tw-text-opacity));
+
   line-height: 1.5em;
   margin-top: 24px;
+}
+
+.modalButtonWrapper {
+  margin-top: 12px;
+  position: absolute;
+  right: 230px;
+}
+
+.icon {
+  cursor: pointer;
+  color: black;
+  transition:
+    fill 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    color 0.1s ease-in-out;
+}
+
+.icon:active {
+  transform: translateY(2px);
+  transform: scale(0.95);
+}
+
+.icon:hover {
+  fill: rgb(90, 89, 89);
 }
 
 .modalButtonContainer {

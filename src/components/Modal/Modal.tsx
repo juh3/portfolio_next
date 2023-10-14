@@ -45,24 +45,25 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
   }
 
   const ExternalButtons = () => {
-    console.log('im here')
     return (
-      <div>
+      <div className={styles.modalButtonWrapper}>
         {selectedProject.github && (
           <IconContext.Provider
             value={{ color: 'black', className: styles.icon }}
           >
             <AiOutlineGithub
-              onClick={() => handleClick('github')}
-              onTouchStart={() => handleClick('github')}
+              size={30}
+              onClick={() => handleClick(selectedProject.github)}
+              onTouchStart={() => handleClick(selectedProject.github)}
             />
           </IconContext.Provider>
         )}
         {selectedProject.figma && (
-          <IconContext.Provider value={{ color: 'black' }}>
+          <IconContext.Provider
+            value={{ color: 'black', className: styles.icon }}
+          >
             <FaFigma
               size={30}
-              color="black"
               onClick={() => handleClick(selectedProject.figma)}
               onTouchStart={() => handleClick(selectedProject.figma)}
             />
@@ -71,7 +72,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
       </div>
     )
   }
-  console.log(selectedProject)
+
   return (
     <motion.div
       className={styles.modalContainer}
@@ -101,11 +102,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
                   height={300}
                 />
               </div>
-
+              {(selectedProject.figma || selectedProject.github) && (
+                <ExternalButtons />
+              )}
               <div className={styles.modalBody}>
-                {(selectedProject.figma || selectedProject.github) && (
-                  <ExternalButtons />
-                )}
                 <p className={styles.bodyText}>{selectedProject.subtitle_1}</p>
                 <br />
                 <p className={styles.bodyText}>{selectedProject.subtitle_2}</p>
