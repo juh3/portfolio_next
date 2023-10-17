@@ -4,12 +4,13 @@ interface CardInterface {
   title: string
   shortDescription: string
   link: string
-  image: string
-  subtitle_1: string
-  subtitle_2: string
-  subtitle_3: string
+  image?: string
+  subtitle_1?: string
+  subtitle_2?: string
+  subtitle_3?: string
   figma?: string
   github?: string
+  smallCardClick?: boolean
 }
 
 interface ProjectModalStore {

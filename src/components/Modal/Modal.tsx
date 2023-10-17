@@ -10,12 +10,13 @@ interface CardInterface {
   title: string
   shortDescription: string
   link: string
-  image: string
-  subtitle_1: string
-  subtitle_2: string
-  subtitle_3: string
+  image?: string
+  subtitle_1?: string
+  subtitle_2?: string
+  subtitle_3?: string
   figma?: string
   github?: string
+  smallCardClick?: boolean
 }
 
 interface ModalProps {
@@ -38,40 +39,46 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
   }, [onClose])
 
   if (selectedProject === null) {
-    return
+    return null
   }
   const handleClick = (link: string) => {
     window.open(link, '_blank')
   }
 
-  const ExternalButtons = () => {
-    return (
-      <div className={styles.modalButtonWrapper}>
-        {selectedProject.github && (
-          <IconContext.Provider
-            value={{ color: 'black', className: styles.icon }}
-          >
-            <AiOutlineGithub
-              size={30}
-              onClick={() => handleClick(selectedProject.github)}
-              onTouchStart={() => handleClick(selectedProject.github)}
-            />
-          </IconContext.Provider>
-        )}
-        {selectedProject.figma && (
-          <IconContext.Provider
-            value={{ color: 'black', className: styles.icon }}
-          >
-            <FaFigma
-              size={30}
-              onClick={() => handleClick(selectedProject.figma)}
-              onTouchStart={() => handleClick(selectedProject.figma)}
-            />
-          </IconContext.Provider>
-        )}
-      </div>
-    )
-  }
+  // const ExternalButtons = () => {
+  //   if (
+  //     typeof selectedProject.github !== 'string' &&
+  //     typeof selectedProject.figma !== 'string'
+  //   ) {
+  //     return null
+  //   }
+  //   return (
+  //     <div className={styles.modalButtonWrapper}>
+  //       {typeof selectedProject.github === 'string' && (
+  //         <IconContext.Provider
+  //           value={{ color: 'black', className: styles.icon }}
+  //         >
+  //           <AiOutlineGithub
+  //             size={30}
+  //             onClick={() => handleClick(selectedProject.github as string)}
+  //             onTouchStart={() => handleClick(selectedProject.github as string)}
+  //           />
+  //         </IconContext.Provider>
+  //       )}
+  //       {typeof selectedProject.figma === 'string' && (
+  //         <IconContext.Provider
+  //           value={{ color: 'black', className: styles.icon }}
+  //         >
+  //           <FaFigma
+  //             size={30}
+  //             onClick={() => handleClick(selectedProject.figma as string)}
+  //             onTouchStart={() => handleClick(selectedProject.figma as string)}
+  //           />
+  //         </IconContext.Provider>
+  //       )}
+  //     </div>
+  //   )
+  // }
 
   return (
     <motion.div
@@ -81,7 +88,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
       transition={{ duration: 0.3 }}
     >
       <div className={styles.modalWrapper}>
-        {showModal && (
+        {showModal ? (
           <div>
             <div className={styles.modalContent}>
               <div className={styles.modalTopBar}>
@@ -94,17 +101,19 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
                 <h2 className={styles.modalHeading}>{selectedProject.title}</h2>
               </div>
 
-              <div className={styles.imageContainer}>
-                <Image
-                  src={selectedProject?.image}
-                  alt="ball of roots logo"
-                  width={500}
-                  height={300}
-                />
-              </div>
-              {(selectedProject.figma || selectedProject.github) && (
-                <ExternalButtons />
+              {selectedProject.image && (
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={selectedProject?.image}
+                    alt="ball of roots logo"
+                    width={500}
+                    height={300}
+                  />
+                </div>
               )}
+              {/* {(selectedProject.figma || selectedProject.github) && (
+                <ExternalButtons />
+              )} */}
               <div className={styles.modalBody}>
                 <p className={styles.bodyText}>{selectedProject.subtitle_1}</p>
                 <br />
@@ -123,7 +132,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
               </div>
             </div>
           </div>
-        )}
+        ) : null}
       </div>
     </motion.div>
   )

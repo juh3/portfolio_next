@@ -80,6 +80,27 @@ const Work = () => {
     }
   ]
 
+  const figmaProjects = [
+    {
+      title: 'HSL',
+      smallCardClick: true,
+      shortDescription: 'HiFi prototype of buying a ticket in HSL mobile app',
+      link: 'https://www.figma.com/file/mICcBWPguZO96580gfjftQ/HSL-BUY-A-TICKET?type=design&node-id=0%3A1&mode=design&t=tlmci18kh5Ghpmtv-1'
+    },
+    {
+      title: 'BEBO - clothing site',
+      smallCardClick: true,
+      link: 'https://www.figma.com/file/OBGM9tdBio5KKRjZsWqwif/Bebo--Clothing-store?type=design&node-id=0%3A1&mode=design&t=qOgN8TVjeP0PogMq-1',
+      shortDescription: 'HiFi prototype of a online clothing store for mobile'
+    },
+    {
+      title: 'SIK redesign',
+      smallCardClick: true,
+      shortDescription: 'Redesign of Guild of Electrical Engineers website',
+      link: 'https://www.figma.com/file/wQzeQRKW38cAysIKi5lhQv/Aalto-yliopiston-S%C3%A4hk%C3%B6insin%C3%B6%C3%B6rikilta?type=design&mode=design&t=qOgN8TVjeP0PogMq-1'
+    }
+  ]
+
   return (
     <div className={styles.work_container} id="Projects">
       <div className={styles.marquee}>
@@ -105,6 +126,38 @@ const Work = () => {
               subtitle_1={work.subtitle_1}
               subtitle_2={work.subtitle_2}
               subtitle_3={work.subtitle_3}
+            />
+          </div>
+        ))}
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column'
+        }}
+      >
+        <h1
+          style={{
+            color: 'black',
+            fontFamily: 'Jetbrains mono, sans serif',
+            textTransform: 'uppercase',
+            marginTop: '16px',
+            marginBottom: '16px'
+          }}
+        >
+          Figma projects
+        </h1>
+        {figmaProjects.map((project, index) => (
+          <div key={index} style={{ marginBottom: '32px' }}>
+            <Card
+              title={project.title}
+              shortDescription={project.shortDescription}
+              link={project.link}
+              smallCardClick={project.smallCardClick}
             />
           </div>
         ))}
