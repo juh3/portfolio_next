@@ -77,7 +77,6 @@ const Navbar = () => {
       <nav className={open ?styles.app__navbar_mobile_open:styles.app__navbar_mobile}>
           <MobileNavbar />
           <MobileMenuBurger />
-
       </nav>
     )
 

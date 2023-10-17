@@ -27,7 +27,8 @@
     "react-router-dom": "^6.16.0",
     "sass": "^1.62.0",
     "swr": "^2.2.2",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "zustand": "^4.4.3"
   },
   "devDependencies": {
     "@types/ityped": "^1.0.1"
