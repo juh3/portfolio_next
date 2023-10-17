@@ -15,9 +15,20 @@
     overflow: hidden;
     height: 206px;
     pointer-events: none;
-
-    @media (max-width: 913px) {
+    @media (min-width: 1300px) {
+      width: 100%;
+    }
+    @media (min-width: 1200px) {
+      width: 200%;
+    }
+    @media (min-width: 1000px) {
       width: 300%;
+    }
+    @media (max-width: 1000px) {
+      width: 400%;
+    }
+    @media (max-width: 913px) {
+      width: 250%;
     }
     @media (max-width: 700px) {
       width: 200%;
@@ -29,7 +40,7 @@
       width: 300%;
     }
     @media (max-width: 351px) {
-      width: 600%;
+      width: 300%;
     }
     .track {
       position: absolute;
@@ -43,7 +54,7 @@
         font-size: 64px;
         color: rgb(40, 39, 39);
         @media (max-width: 900px) {
-          font-size: 32px;
+          font-size: 42px;
         }
         @media (max-width: 451px) {
           font-size: 28px;
