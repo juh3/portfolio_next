@@ -24,6 +24,7 @@ const Work = () => {
       isMounted = false
     }
   }, [animateMarquee])
+
   const projects = [
     {
       title: 'Kinopoli',
@@ -110,13 +111,14 @@ const Work = () => {
           </h1>
         </motion.div>
       </div>
-      <motion.div
-        className={styles.projects}
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
-      >
+      <div className={styles.projects}>
         {projects.map((work, index) => (
-          <div key={index} style={{ marginBottom: '48px' }}>
+          <motion.div
+            key={index}
+            style={{ marginBottom: '48px' }}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
+          >
             <Card
               title={work.title}
               image={work.image}
@@ -127,9 +129,9 @@ const Work = () => {
               subtitle_2={work.subtitle_2}
               subtitle_3={work.subtitle_3}
             />
-          </div>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 60 }}
