@@ -89,47 +89,45 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
     >
       <div className={styles.modalWrapper}>
         {showModal ? (
-          <div>
-            <div className={styles.modalContent}>
-              <div className={styles.modalTopBar}>
-                <button onClick={handleClose} className={styles.modalClose}>
-                  <AiOutlineClose size={38} color="black" />
-                </button>
-              </div>
+          <div className={styles.modalContent}>
+            <div className={styles.modalTopBar}>
+              <button onClick={handleClose} className={styles.modalClose}>
+                <AiOutlineClose size={38} color="black" />
+              </button>
+            </div>
 
-              <div className={styles.modalHeader}>
-                <h2 className={styles.modalHeading}>{selectedProject.title}</h2>
-              </div>
+            <div className={styles.modalHeader}>
+              <h2 className={styles.modalHeading}>{selectedProject.title}</h2>
+            </div>
 
-              {selectedProject.image && (
-                <div className={styles.imageContainer}>
-                  <Image
-                    src={selectedProject?.image}
-                    alt="ball of roots logo"
-                    width={500}
-                    height={300}
-                  />
-                </div>
-              )}
-              {/* {(selectedProject.figma || selectedProject.github) && (
+            {selectedProject.image && (
+              <div className={styles.imageContainer}>
+                <Image
+                  src={selectedProject?.image}
+                  alt="ball of roots logo"
+                  width={500}
+                  height={300}
+                />
+              </div>
+            )}
+            {/* {(selectedProject.figma || selectedProject.github) && (
                 <ExternalButtons />
               )} */}
-              <div className={styles.modalBody}>
-                <p className={styles.bodyText}>{selectedProject.subtitle_1}</p>
-                <br />
-                <p className={styles.bodyText}>{selectedProject.subtitle_2}</p>
-                <br />
-                <p className={styles.bodyText}>{selectedProject.subtitle_3}</p>
-              </div>
+            <div className={styles.modalBody}>
+              <p className={styles.bodyText}>{selectedProject.subtitle_1}</p>
+              <br />
+              <p className={styles.bodyText}>{selectedProject.subtitle_2}</p>
+              <br />
+              <p className={styles.bodyText}>{selectedProject.subtitle_3}</p>
+            </div>
 
-              <div className={styles.modalButtonContainer}>
-                <button
-                  className={styles.modalButton}
-                  onClick={() => handleClick(selectedProject.link)}
-                >
-                  To the site
-                </button>
-              </div>
+            <div className={styles.modalButtonContainer}>
+              <button
+                className={styles.modalButton}
+                onClick={() => handleClick(selectedProject.link)}
+              >
+                To the site
+              </button>
             </div>
           </div>
         ) : null}
