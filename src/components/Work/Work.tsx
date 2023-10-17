@@ -29,9 +29,9 @@ const Work = () => {
     {
       title: 'Kinopoli',
       image: '/kinopoli_frontpage.png',
+      link: '',
       shortDescription:
         'WIP. Part of the dev team focusing on the frontend and UX/UI. A reservation site for the movietheater Kinopoli. Stack included React, Next, Vite, SCSS.',
-      link: 'https://kinopoli.fi/',
       subtitle_1:
         'Kinopoli desperately needed a new website. With the renovation of the theatre in Summer of 2023, this project was also started after a bit of a break. I joined the dev team with Ilari and Mikko. The project was started already by Toni a year or so ago',
       subtitle_2:
@@ -42,8 +42,8 @@ const Work = () => {
     {
       title: 'ApproKartat',
       image: '/ballofroots_frontpage.png',
+      link: '',
       shortDescription: "Project for a course 'Design of WWW Services', WIP",
-      link: 'https://ballofroots.com/',
       subtitle_1:
         'This project was done for the course Design of WWW Services D with the same team as the Kylän Keittiö website. Appros or bar crawls are one of the more popular student events out there.',
       subtitle_2:

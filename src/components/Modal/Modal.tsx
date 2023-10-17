@@ -45,41 +45,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
     window.open(link, '_blank')
   }
 
-  // const ExternalButtons = () => {
-  //   if (
-  //     typeof selectedProject.github !== 'string' &&
-  //     typeof selectedProject.figma !== 'string'
-  //   ) {
-  //     return null
-  //   }
-  //   return (
-  //     <div className={styles.modalButtonWrapper}>
-  //       {typeof selectedProject.github === 'string' && (
-  //         <IconContext.Provider
-  //           value={{ color: 'black', className: styles.icon }}
-  //         >
-  //           <AiOutlineGithub
-  //             size={30}
-  //             onClick={() => handleClick(selectedProject.github as string)}
-  //             onTouchStart={() => handleClick(selectedProject.github as string)}
-  //           />
-  //         </IconContext.Provider>
-  //       )}
-  //       {typeof selectedProject.figma === 'string' && (
-  //         <IconContext.Provider
-  //           value={{ color: 'black', className: styles.icon }}
-  //         >
-  //           <FaFigma
-  //             size={30}
-  //             onClick={() => handleClick(selectedProject.figma as string)}
-  //             onTouchStart={() => handleClick(selectedProject.figma as string)}
-  //           />
-  //         </IconContext.Provider>
-  //       )}
-  //     </div>
-  //   )
-  // }
-
   return (
     <motion.div
       className={styles.modalContainer}
@@ -110,9 +75,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
                 />
               </div>
             )}
-            {/* {(selectedProject.figma || selectedProject.github) && (
-                <ExternalButtons />
-              )} */}
+
             <div className={styles.modalBody}>
               <p className={styles.bodyText}>{selectedProject.subtitle_1}</p>
               <br />
@@ -122,12 +85,38 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
             </div>
 
             <div className={styles.modalButtonContainer}>
-              <button
-                className={styles.modalButton}
-                onClick={() => handleClick(selectedProject.link)}
-              >
-                To the site
-              </button>
+              {selectedProject.link.length > 1 && (
+                <button
+                  className={styles.modalButton}
+                  onClick={() => handleClick(selectedProject.link)}
+                >
+                  To the site
+                </button>
+              )}
+              {typeof selectedProject.figma === 'string' && (
+                <button
+                  className={styles.modalButton}
+                  onClick={() => handleClick(selectedProject.figma as string)}
+                  style={{ background: 'none', color: 'black' }}
+                >
+                  Figma
+                </button>
+              )}
+              {typeof selectedProject.github === 'string' && (
+                <IconContext.Provider
+                  value={{ color: 'black', className: styles.icon }}
+                >
+                  <AiOutlineGithub
+                    size={30}
+                    onClick={() =>
+                      handleClick(selectedProject.github as string)
+                    }
+                    onTouchStart={() =>
+                      handleClick(selectedProject.github as string)
+                    }
+                  />
+                </IconContext.Provider>
+              )}
             </div>
           </div>
         ) : null}
