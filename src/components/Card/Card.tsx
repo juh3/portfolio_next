@@ -27,7 +27,7 @@ const Card: React.FC<CardInterface> = (project) => {
     <div
       className={styles.card}
       onClick={
-        project.smallCardClick
+        project.smallCardClick && typeof project.link === 'string'
           ? () => openSmallCard(project.link)
           : () => rootModal.onOpen(project)
       }

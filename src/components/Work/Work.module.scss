@@ -9,20 +9,19 @@
   padding-bottom: 64px;
   .marquee {
     position: relative;
-    width: 140vw;
     padding-top: 8rem;
     padding-bottom: 8rem;
     overflow: hidden;
     height: 206px;
     pointer-events: none;
-    @media (min-width: 1300px) {
+    @media (min-width: 1500px) {
       width: 100%;
     }
-    @media (min-width: 1200px) {
-      width: 200%;
+    @media (min-width: 1300px) {
+      width: 250%;
     }
     @media (min-width: 1000px) {
-      width: 300%;
+      width: 224%;
     }
     @media (max-width: 1000px) {
       width: 400%;
@@ -53,6 +52,7 @@
         font-weight: 500;
         font-size: 64px;
         color: rgb(40, 39, 39);
+
         @media (max-width: 900px) {
           font-size: 42px;
         }
