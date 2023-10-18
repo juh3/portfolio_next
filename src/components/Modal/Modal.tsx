@@ -97,7 +97,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedProject }) => {
                 <button
                   className={styles.modalButton}
                   onClick={() => handleClick(selectedProject.figma as string)}
-                  style={{ background: 'none', color: 'black' }}
                 >
                   Figma
                 </button>
