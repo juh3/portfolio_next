@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Card.module.scss'
 import Image from 'next/image'
 import useProjectModal from '../../utils/useProjectModal'
-
+import { useRouter } from 'next/router'
 interface CardInterface {
   title: string
   shortDescription: string
@@ -17,7 +17,7 @@ interface CardInterface {
 }
 
 const Card: React.FC<CardInterface> = (project) => {
-  const rootModal = useProjectModal()
+  const router = useRouter()
 
   const openSmallCard = (link: string) => {
     window.open(link, '_blank')
@@ -29,7 +29,7 @@ const Card: React.FC<CardInterface> = (project) => {
       onClick={
         project.smallCardClick && typeof project.link === 'string'
           ? () => openSmallCard(project.link)
-          : () => rootModal.onOpen(project)
+          : () => router.push(`projects/${project.title}`)
       }
     >
       <div className={styles.card_overlay}>

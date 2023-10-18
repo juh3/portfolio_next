@@ -36,14 +36,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Navbar />
         <Header />
         <About />
         <RootModal />
         <Work />
         {typeof topFive !== 'string' && <Music topFive={topFive} />}
-        {/* <Gallery /> */}
-        {/* <Footer /> */}
       </main>
     </>
   )

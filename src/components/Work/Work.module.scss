@@ -14,6 +14,8 @@
     overflow: hidden;
     height: 206px;
     pointer-events: none;
+    animation: marqueeAnimation 8s infinite;
+
     @media (min-width: 1500px) {
       width: 100%;
     }
@@ -77,5 +79,17 @@
       margin-top: 12px;
       width: 90vw;
     }
+  }
+}
+
+@keyframes marqueeAnimation {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(
+      -100px
+    ); /* Adjust this value based on your requirements */
   }
 }
