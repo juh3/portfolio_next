@@ -1,30 +1,9 @@
-import React, { useEffect, useCallback } from 'react'
+import React, { useEffect, useCallback, useRef, useState } from 'react'
 import styles from './Work.module.scss'
 import Card from '../Card/Card'
 import { motion, useAnimation } from 'framer-motion'
 
 const Work = () => {
-  const controls = useAnimation()
-  const animateMarquee = useCallback(async () => {
-    while (true) {
-      await controls.start({ x: -100, transition: { duration: 6 } }) // Adjust the distance for your needs
-      await controls.start({ x: 0, transition: { duration: 4 } })
-    }
-  }, [controls])
-
-  useEffect(() => {
-    let isMounted = true
-    const startAnimation = async () => {
-      while (isMounted) {
-        await animateMarquee()
-      }
-    }
-    startAnimation()
-    return () => {
-      isMounted = false
-    }
-  }, [animateMarquee])
-
   const projects = [
     {
       title: 'Kinopoli',
@@ -103,14 +82,17 @@ const Work = () => {
     }
   ]
 
+  const controls = useAnimation()
+  const [mounted, setMounted] = useState(false)
+
   return (
     <div className={styles.work_container} id="Projects">
       <div className={styles.marquee}>
-        <motion.div className={styles.track} animate={controls}>
+        <div className={styles.track}>
           <h1>
             Projects Projects Projects Projects Projects Projects Projects
           </h1>
-        </motion.div>
+        </div>
       </div>
       <div className={styles.projects}>
         {projects.map((work, index) => (
