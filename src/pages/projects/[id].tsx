@@ -123,15 +123,12 @@ const SingleProjectPage: NextPage = () => {
                 </button>
               )}
               {typeof project.github === 'string' && (
-                <IconContext.Provider
-                  value={{ color: 'black', className: styles.icon }}
+                <button
+                  className={styles.modalButton}
+                  onClick={() => handleClick(project.github as string)}
                 >
-                  <AiOutlineGithub
-                    size={30}
-                    onClick={() => handleClick(project.github as string)}
-                    onTouchStart={() => handleClick(project.github as string)}
-                  />
-                </IconContext.Provider>
+                  Github
+                </button>
               )}
             </div>
           </div>
