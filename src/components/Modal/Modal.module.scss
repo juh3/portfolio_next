@@ -115,9 +115,9 @@
   color: rgb(23, 23, 23);
   font-family: 'Montserrat', sans-serif;
 
-  max-width: 55ch;
+  width: 55ch;
   font-size: 18px;
-
+  text-align: left;
   line-height: 1.5em;
   margin-top: 24px;
   @media (max-width: 913px) {
@@ -133,13 +133,14 @@
   align-items: center;
   .modalButton {
     cursor: pointer;
-    font-size: 16px;
+    font-size: 24px;
+    border-radius: 12px;
     margin-bottom: 24px;
     padding: {
-      top: 12px;
-      bottom: 12px;
-      left: 8px;
-      right: 8px;
+      top: 16px;
+      bottom: 16px;
+      left: 12px;
+      right: 12px;
     }
     margin-left: 12px;
     box-shadow:
