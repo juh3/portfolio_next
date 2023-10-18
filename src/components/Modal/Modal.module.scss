@@ -115,14 +115,14 @@
   color: rgb(23, 23, 23);
   font-family: 'Montserrat', sans-serif;
 
-  width: 55ch;
+  max-width: 55ch;
   font-size: 18px;
   text-align: left;
   line-height: 1.5em;
   margin-top: 24px;
   @media (max-width: 913px) {
     font-size: 14px;
-    max-width: 55ch;
+    max-width: 90%;
     margin-top: 8px;
   }
 }
