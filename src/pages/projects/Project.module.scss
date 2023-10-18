@@ -1,12 +1,12 @@
 .modalContainer {
   display: flex;
   width: 100vw;
+  position: relative;
+  z-index: 2;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  position: fixed;
-  outline: none;
   background: rgb(216, 193, 193);
 }
 
@@ -122,10 +122,10 @@
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     @media (max-width: 648px) {
       padding: {
-        top: 16px;
-        bottom: 16px;
-        left: 12px;
-        right: 12px;
+        top: 12px;
+        bottom: 12px;
+        left: 8px;
+        right: 8px;
       }
       font-size: 18px;
     }
