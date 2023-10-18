@@ -28,8 +28,6 @@
   flex-direction: column;
   width: 100%;
   outline: none;
-
-  overflow-y: auto;
 }
 
 .modalTopBar {
@@ -100,6 +98,9 @@
   flex-direction: row;
   align-items: center;
   margin-top: 36px;
+  @media (max-width: 648px) {
+    margin-top: 12px;
+  }
   .modalButton {
     cursor: pointer;
     font-size: 24px;
@@ -119,6 +120,15 @@
     box-shadow:
       rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    @media (max-width: 648px) {
+      padding: {
+        top: 16px;
+        bottom: 16px;
+        left: 12px;
+        right: 12px;
+      }
+      font-size: 18px;
+    }
   }
   .modalButton:hover {
     box-shadow: none;
