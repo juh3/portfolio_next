@@ -4,6 +4,7 @@
   background-color: rgb(210, 210, 209);
   width: 100vw;
   min-height: 100vh;
+  border-top: 1px solid rgb(209, 209, 208);
   @media (max-width: 913px) {
     min-height: max-content;
   }
@@ -28,8 +29,8 @@
       border-radius: 12px;
       border: 1px solid rgb(221, 221, 208);
       box-shadow:
-        2px 2px 8px 1px rgba(52, 52, 52, 0.2),
-        -2px 0px 8px 1px rgba(52, 52, 52, 0.2);
+        rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
       padding-left: 2rem;
       padding-right: 2rem;
       padding-bottom: 24px;
@@ -45,6 +46,9 @@
         color: black;
         line-height: 1.5em;
         margin-top: 24px;
+        @media (max-width: 648px) {
+          font-size: 18px;
+        }
       }
     }
   }

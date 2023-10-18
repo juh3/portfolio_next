@@ -7,7 +7,7 @@ const MusicCard = ({ song }: { song: ParsedSong }) => {
   const handleNavigation = (url: string): void => {
     window.open(url, '_blank', 'noopener, noreferrer')
   }
-  console.log(song.spotify)
+
   return (
     <div
       className={styles.music_card}
@@ -28,8 +28,8 @@ const MusicCard = ({ song }: { song: ParsedSong }) => {
             <p className={styles.song_name}>{song.title}</p>
             <p className={styles.song_artist}>{song.artist}</p>
             {song.isPlaying &&
-              typeof song.duration === 'string' &&
-              typeof song.progress === 'string' && (
+              typeof song.duration === 'number' &&
+              typeof song.progress === 'number' && (
                 <ProgressBar
                   duration={song.duration}
                   progress={song.progress}

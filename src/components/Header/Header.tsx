@@ -28,7 +28,7 @@ const Header = () => {
     switch (name) {
       case 'github':
         window.open('https://github.com/juh3', '_blank')
-
+        break
       case 'linkedin':
         window.open('https://www.linkedin.com/in/juha-anttila/', '_blank')
         break
@@ -131,7 +131,10 @@ const Header = () => {
               <IconContext.Provider
                 value={{ color: 'black', className: styles.icon }}
               >
-                <AiOutlineGithub onClick={() => handleIconClick('github')} />
+                <AiOutlineGithub
+                  onClick={() => handleIconClick('github')}
+                  onTouchStart={() => handleIconClick('github')}
+                />
                 <div className={styles.button_layer}></div>
               </IconContext.Provider>
             </div>
