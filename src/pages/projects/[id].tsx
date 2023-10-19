@@ -16,9 +16,9 @@ const projects = [
     shortDescription:
       'WIP. Part of the dev team focusing on the frontend and UX/UI. A reservation site for the movietheater Kinopoli. Stack included React, Next, Vite, SCSS.',
     subtitle_1:
-      'Kinopoli desperately needed a new website. With the renovation of the theatre in Summer of 2023, this project was also started after a bit of a break. I joined the dev team with Ilari and Mikko. The project was started already by Toni a year or so ago',
+      'Kinopoli desperately needs a new website. With the renovation of the theatre in the Summer of 2023, this project was also started after a bit of a break. I joined the dev team with Ilari and Mikko. The project was started already by Toni a year or so ago with slow progress.',
     subtitle_2:
-      'My effort was concentrated on the frontend. I was heavily involved with the frontend reservation part, responsiveness and localization.',
+      'My effort was concentrated on the frontend. I was heavily involved with the frontend reservation flow and UI, responsiveness of the page and localization.',
     subtitle_3:
       'The tech stack was PERN. React, Redux, PostqreSQL, Express, Node and SCSS/SASS'
   },
@@ -32,9 +32,9 @@ const projects = [
     subtitle_1:
       'This project is under work for the course Design of WWW Services D with the same team as the Kylän Keittiö website. Appros or bar crawls are one of the more popular student events out there.',
     subtitle_2:
-      'However, there are some issues of how Appros are organized currently. We wish to change that: by being a time saver for the organizer, by being a more sustainable option and offering more satisfaction.',
+      'However, there are some issues of how Appros are organized currently. We wish to change that: by being a time saver for the organizers, by being a more sustainable option and offering more satisfaction.',
     subtitle_3:
-      'I conducted user research and semi-structured interviews, crafted personas and designed the UI with the WCAG4.0 in mind. I did also some frontend work. The stack was t3. Design tool was Figma.'
+      'I conducted user research and semi-structured interviews, crafted personas and designed the UI with the WCAG 3.0 in mind. I created a design system and explored different kinds of layouts for the UI in Figma. We hope to conduct a usability survey at the end of november. My responsibilites also includes some frontend work. The stack was t3.'
   },
   {
     title: 'Kylän Keittiö',
@@ -45,9 +45,9 @@ const projects = [
       'Part of the dev team. I did the design in Figma and did 50% of the frontend. T3 stack was used. Mobile-first.',
     link: 'https://kylankeittio.fi/',
     subtitle_1:
-      'Kylän Keittiö is an association for foodies in Aalto University. I was a founding member.',
+      'I was a founding member of Kylän Keittiö which is an association for foodies in Aalto University.',
     subtitle_2:
-      'My responsibilities included UI design with mobile-first in Figma and frontend development.',
+      'The board wanted a website for their association and I was given free hands of how it should look like and what features it would have. I partenered up with Niilo and Ilari. My responsibilities included UI design with a mobile-first focus, which I used Figma for and 50% of the frontend development.',
     subtitle_3:
       'The tech stack was t3. Next, Prisma, tRPC, TypeScript and React'
   },
@@ -76,8 +76,8 @@ const SingleProjectPage: NextPage = () => {
     return (
       <motion.div
         className={styles.modalContainer}
-        initial={{ opacity: 0, translateX: '100%' }}
-        animate={{ opacity: 1, translateX: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
         <div className={styles.modalWrapper}>
