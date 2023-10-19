@@ -111,10 +111,11 @@
     font-size: 24px;
     border-radius: 12px;
     margin-bottom: 24px;
-    background-color: paleturquoise;
-    color: black;
-
-    border: 1px solid paleturquoise;
+    background-color: #008080;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid #008080;
     padding: {
       top: 16px;
       bottom: 16px;
@@ -123,7 +124,7 @@
     }
     margin-left: 12px;
     box-shadow:
-      rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.1) 0px 8px 6px -1px,
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     @media (max-width: 648px) {
       padding: {
@@ -134,11 +135,17 @@
       }
       font-size: 18px;
     }
-  }
-  .modalButton:hover {
-    box-shadow: none;
-    border: 1px solid white;
-    animation-delay: 0.2ms;
-    transition-duration: 0.2ms;
+
+    &:hover {
+      box-shadow: none;
+      border: 1px solid white;
+      animation-delay: 0.2ms;
+      transition: background-color 0.2s ease-in border-color 0.3s ease-in
+        box-shadow 0.3 ease-out;
+    }
+    &:active {
+      transform: translateY(2px);
+      transform: scale(0.9);
+    }
   }
 }
