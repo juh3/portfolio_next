@@ -20,7 +20,9 @@ const Card: React.FC<CardInterface> = (project) => {
   const router = useRouter()
 
   const openSmallCard = (link: string) => {
-    window.open(link, '_blank')
+    setTimeout(() => {
+      window.open(link, '_blank')
+    }, 1000)
   }
 
   return (
@@ -29,7 +31,10 @@ const Card: React.FC<CardInterface> = (project) => {
       onClick={
         project.smallCardClick && typeof project.link === 'string'
           ? () => openSmallCard(project.link)
-          : () => router.push(`projects/${project.title}`)
+          : () =>
+              setTimeout(() => {
+                router.push(`projects/${project.title}`)
+              }, 1000)
       }
     >
       <div className={styles.card_overlay}>
