@@ -1,19 +1,19 @@
-.button{
+.button {
   padding-inline: 16px;
   padding-top: 18px;
   padding-bottom: 18px;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 8px;
   background-color: rgb(21, 43, 168);
   box-shadow: 4px 4px 12px rgb(55, 55, 55);
   border: none;
 }
 
-.button:active{
+.button:active {
   box-shadow: none;
   background-color: rgb(99, 110, 170);
 }
-.button:focus{
-  outline: none
+.button:focus {
+  outline: none;
 }
