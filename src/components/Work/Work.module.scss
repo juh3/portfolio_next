@@ -17,7 +17,7 @@
     pointer-events: none;
     animation: marqueeAnimation 8s infinite;
     overflow: hidden;
-    white-space: nowrap;
+    text-wrap: nowrap;
     @media (min-width: 1500px) {
       width: 200%;
     }
