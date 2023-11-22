@@ -7,6 +7,7 @@
   width: 100vw;
   min-height: 100vh;
   padding-bottom: 64px;
+
   .marquee {
     position: relative;
     padding-top: 8rem;
@@ -15,7 +16,8 @@
     height: 206px;
     pointer-events: none;
     animation: marqueeAnimation 8s infinite;
-
+    overflow: hidden;
+    text-wrap: nowrap;
     @media (min-width: 1500px) {
       width: 200%;
     }
