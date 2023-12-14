@@ -30,8 +30,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Juha`s portfolio</title>
-        <meta name="description" content="Juha's portfolio page" />
+        <title>Juha Anttila</title>
+        <meta name="description" content="Juha Anttila's portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
