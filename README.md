@@ -1,8 +1,13 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+Use 
+```
+npm install
+```
+inside the repository to install the required packages.
 
-First, run the development server:
+Then you can run the development server:
 
 ```bash
 npm run dev
@@ -11,8 +16,8 @@ yarn dev
 # or
 pnpm dev
 ```
-If you want the spotify link to work locally, follow these instructions: [https://developer.spotify.com/documentation/web-api]
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+If you want the spotify link to work locally, follow these instructions: [https://developer.spotify.com/documentation/web-api] and put the following values to an .env file: NEXT_SPOTIFY_CLIENT_ID, NEXT_SPOTIFY_CLIENT_SECRET and NEXT_SPOTIFY_REFRESH_TOKEN.
