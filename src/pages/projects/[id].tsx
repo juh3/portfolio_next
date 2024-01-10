@@ -14,27 +14,28 @@ const projects = [
     image: '/kinopoli_frontpage.png',
     link: '',
     shortDescription:
-      'WIP. Part of the dev team focusing on the frontend and UX/UI. A reservation site for the movietheater Kinopoli. Stack included React, Next, Vite, SCSS.',
+      'WIP, production soon up. A reservation site for the movie theater Kinopoli. Stack included React, Node, Express, Vite, SCSS and PostgreSQL.',
     subtitle_1:
-      'Kinopoli desperately needs a new website. With the renovation of the theatre in the Summer of 2023, this project was also started after a bit of a break. I joined the dev team with Ilari and Mikko. The project was started already by Toni a year or so ago with slow progress.',
+      'Kinopoli desperately needs a new website. With the renovation of the theatre in Summer of 2023, this project was also started after a bit of a break. The dev team is mainly me, Ilari and Mikko.',
     subtitle_2:
-      'My effort was concentrated on the frontend. I was heavily involved with the frontend reservation flow and UI, responsiveness of the page and localization.',
+      'I am heavily involved with the frontend reservation part, the other pages, responsiveness and localization. I also created a Telegram-bot to send a message to the volunteers who open the doors to the people reserving the theatre whenever a reservation is made where the volunteer is the opener, 3 days before an opening and on the morning of the door opening turn. ',
     subtitle_3:
-      'The tech stack was PERN. React, Redux, PostqreSQL, Express, Node and SCSS/SASS'
+      'The tech stack was PERN. React, Redux, PostqreSQL, Express, Node and SCSS/SASS. The site uses Stripe to handle payments and a webhook to confirm or cancel reservations'
   },
   {
     title: 'ApproKartat',
     image: '/approkartat.png',
-    link: '',
+    link: 'https://www.approkartat.fi/',
     figma:
       'https://www.figma.com/file/oQo2kNOQBDLGze7iinD0c0/Approkartat?type=design&node-id=0%3A1&mode=design&t=mqXK7bvKnfLKQz2I-1',
-    shortDescription: "Project for a course 'Design of WWW Services', WIP",
+    shortDescription:
+      "Project for a course 'Design of WWW Services', mobile only, WIP",
     subtitle_1:
-      'This project is under work for the course Design of WWW Services D with the same team as the Kylän Keittiö website. Appros or bar crawls are one of the more popular student events out there.',
+      'This project as is was for the course Design of WWW Services D with the same team as the Kylän Keittiö website and is mobile only. Appros or bar crawls are one of the more popular student events out there and our idea tries to replace the clunky physical bar crawl stamp and map paper. In addition, there are some issues of how Appros are organized currently. We wish to change that: by being a time saver for the organizer, by being a more sustainable option and offering more satisfaction to participants and organizers.',
     subtitle_2:
-      'However, there are some issues of how Appros are organized currently. We wish to change that: by being a time saver for the organizers, by being a more sustainable option and offering more satisfaction.',
+      'The application works as intended, we had our first field test in Estonia at the start of December and people liked using it and felt it was a cool idea. It still however needs some work like designing a lot better landing pages and dashboards for both organizers and event participants as well as taking into account different browsers and the issues that arise from that. The organizer can create an event which is quite customizable. The organizer can add locations via a map or by inputting a street name. The organizer can add different stamp images to different locations and more! The participant is linked to the event by an email, which the organizer has to add in event creation in a .csv-file. The site generates QR-codes which the participants then have to scan with our site in order to collect stamps.',
     subtitle_3:
-      'I conducted user research and semi-structured interviews, crafted personas and designed the UI with the WCAG 3.0 in mind. I created a design system and explored different kinds of layouts for the UI in Figma. We hope to conduct a usability survey at the end of november. My responsibilites also includes some frontend work. The stack was t3.'
+      'I conducted user research and semi-structured interviews, crafted personas and designed the UI with the WCAG3.0 in mind. I did also frontend work like the stamp card and how the map handles location pins and information and a ton more. The stack was t3. Design tool was Figma.'
   },
   {
     title: 'Kylän Keittiö',
@@ -45,9 +46,9 @@ const projects = [
       'Part of the dev team. I did the design in Figma and did 50% of the frontend. T3 stack was used. Mobile-first.',
     link: 'https://kylankeittio.fi/',
     subtitle_1:
-      'I was a founding member of Kylän Keittiö which is an association for foodies in Aalto University.',
+      'Kylän Keittiö is an association for foodies in Aalto University. I was a founding member for the association.',
     subtitle_2:
-      'The board wanted a website for their association and I was given free hands of how it should look like and what features it would have. I partenered up with Niilo and Ilari. My responsibilities included UI design with a mobile-first focus, which I used Figma for and 50% of the frontend development.',
+      'My responsibilities included UI design with mobile-first in Figma and frontend development.',
     subtitle_3:
       'The tech stack was t3. Next, Prisma, tRPC, TypeScript and React'
   },
@@ -61,7 +62,7 @@ const projects = [
     subtitle_1:
       'After completing the FullStack Open course I really wanted to make something own with the technologies and skills I learnt during the course.',
     subtitle_2:
-      'This project definitely could need some improvements like notifications and loading animations.he tech stack was React, Node and MongoDB.'
+      'This project definitely could need some improvements which I realize after the fact like notifications and loading animations to inform the user the state of the site. The tech stack was React, Node, express and MongoDB.'
   }
 ]
 const SingleProjectPage: NextPage = () => {
