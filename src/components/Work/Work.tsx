@@ -10,9 +10,9 @@ const Work = () => {
       image: '/kinopoli_frontpage.png',
       link: '',
       shortDescription:
-        'WIP. Part of the dev team focusing on the frontend and UX/UI. A reservation site for the movietheater Kinopoli. Stack included React, Next, Vite, SCSS.',
+        'WIP, production soon up. Mainly 3 people project. A reservation site for the movie theater Kinopoli. Stack included React, Node, Express, Vite, SCSS and PostgreSQL.',
       subtitle_1:
-        'Kinopoli desperately needed a new website. With the renovation of the theatre in Summer of 2023, this project was also started after a bit of a break. I joined the dev team with Ilari and Mikko. The project was started already by Toni a year or so ago',
+        'Kinopoli desperately needs a new website. With the renovation of the theatre in Summer of 2023, this project was also started after a bit of a break. The dev team with Ilari and Mikko.',
       subtitle_2:
         'My effort was concentrated on the frontend. I was heavily involved with the frontend reservation part, responsiveness and localization.',
       subtitle_3:
