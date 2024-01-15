@@ -14,13 +14,13 @@ const projects = [
     image: '/kinopoli_frontpage.png',
     link: '',
     shortDescription:
-      'WIP, production soon up. A reservation site for the movie theater Kinopoli. Stack included React, Node, Express, Vite, SCSS and PostgreSQL.',
+      'A reservation site for the movie theater Kinopoli. Stack included React, Node, Express, Stripe, SCSS and PostgreSQL. WIP, production soon up. A 3 people project.',
     subtitle_1:
-      'Kinopoli desperately needs a new website. With the renovation of the theatre in Summer of 2023, this project was also started after a bit of a break. The dev team is mainly me, Ilari and Mikko.',
+      'Kinopoli is in dire need of a new website, especially with the renovation of the theatre that happened during Summer 2023. After a brief hiatus, the website overhaul project has been restarted by a team comprising myself, Ilari, and Mikko.',
     subtitle_2:
-      'I am heavily involved with the frontend reservation part, the other pages, responsiveness and localization. I also created a Telegram-bot to send a message to the volunteers who open the doors to the people reserving the theatre whenever a reservation is made where the volunteer is the opener, 3 days before an opening and on the morning of the door opening turn. ',
+      'My effort was concentrated both on the frontend and backend. I was heavily involved with the frontend reservation part, user reservation view, creation of pages, responsiveness and localization. I also created a Telegram bot to notify volunteers responsible for opening the theatre doors whenever a reservation is made that involves them.',
     subtitle_3:
-      'The tech stack was PERN. React, Redux, PostqreSQL, Express, Node and SCSS/SASS. The site uses Stripe to handle payments and a webhook to confirm or cancel reservations'
+      'The technology stack employed for this project is PERN, utilizing React, Redux, PostgreSQL, Express, Node, and SCSS/SASS. To facilitate seamless payment processing, the website integrates Stripe, and a webhook is employed to promptly confirm or cancel reservations.'
   },
   {
     title: 'ApproKartat',
@@ -29,11 +29,11 @@ const projects = [
     figma:
       'https://www.figma.com/file/oQo2kNOQBDLGze7iinD0c0/Approkartat?type=design&node-id=0%3A1&mode=design&t=mqXK7bvKnfLKQz2I-1',
     shortDescription:
-      "Project for a course 'Design of WWW Services', mobile only, WIP",
+      "Digital bar crawl map for student events. Project for a course 'Design of WWW Services', WIP",
     subtitle_1:
-      'This project as is was for the course Design of WWW Services D with the same team as the Kylän Keittiö website and is mobile only. Appros or bar crawls are one of the more popular student events out there and our idea tries to replace the clunky physical bar crawl stamp and map paper. In addition, there are some issues of how Appros are organized currently. We wish to change that: by being a time saver for the organizer, by being a more sustainable option and offering more satisfaction to participants and organizers.',
+      'This project as is was for the course Design of WWW Services D and we will continue working on it during the Spring with the same team as the Kylän Keittiö website. Appros or bar crawls are one of the more popular student events out there and our idea tries to replace the clunky physical bar crawl stamp and map. In addition, there are some hurdles of how Appros are organized currently. We wish to change that: by being a time saver for the organizer, by being a more sustainable option and offering more satisfaction to participants and organizers.',
     subtitle_2:
-      'The application works as intended, we had our first field test in Estonia at the start of December and people liked using it and felt it was a cool idea. It still however needs some work like designing a lot better landing pages and dashboards for both organizers and event participants as well as taking into account different browsers and the issues that arise from that. The organizer can create an event which is quite customizable. The organizer can add locations via a map or by inputting a street name. The organizer can add different stamp images to different locations and more! The participant is linked to the event by an email, which the organizer has to add in event creation in a .csv-file. The site generates QR-codes which the participants then have to scan with our site in order to collect stamps.',
+      'The application works as intended, we had our first field test in Estonia at the start of December and users liked using it and felt it was a cool idea. It still however needs some work like designing a lot better landing page and dashboards for both organizers and event participants as well as taking into account different browsers and the issues that arise from that. The main idea of our application is that the organizer can create an event which is quite customizable. The organizer can add locations via a map or by inputting a street name. The organizer can add different stamp images to different locations and more! The participant is linked to the event by an email, which the organizer has to add in event creation in a .csv-file. The site generates QR-codes which the participants then have to scan with our site in order to collect stamps. The event view has a map where all of the bars are located and it can use the devices location to help users navigate to an events location.',
     subtitle_3:
       'I conducted user research and semi-structured interviews, crafted personas and designed the UI with the WCAG3.0 in mind. I did also frontend work like the stamp card and how the map handles location pins and information and a ton more. The stack was t3. Design tool was Figma.'
   },
