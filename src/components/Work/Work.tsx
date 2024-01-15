@@ -10,13 +10,13 @@ const Work = () => {
       image: '/kinopoli_frontpage.png',
       link: '',
       shortDescription:
-        'WIP, production soon up. Mainly 3 people project. A reservation site for the movie theater Kinopoli. Stack included React, Node, Express, Vite, SCSS and PostgreSQL.',
+        'A reservation site for the movie theater Kinopoli. Stack included React, Node, Express, Stripe, SCSS and PostgreSQL. WIP, production soon up. A 3 people project.',
       subtitle_1:
-        'Kinopoli desperately needs a new website. With the renovation of the theatre in Summer of 2023, this project was also started after a bit of a break. The dev team with Ilari and Mikko.',
+        'Kinopoli is in dire need of a new website, especially with the renovation of the theatre that happened during Summer 2023. After a brief hiatus, the website overhaul project has been restarted by a team comprising myself, Ilari, and Mikko.',
       subtitle_2:
-        'My effort was concentrated on the frontend. I was heavily involved with the frontend reservation part, responsiveness and localization.',
+        'My effort was concentrated both on the frontend and backend. I was heavily involved with the frontend reservation part, user reservation view, creation of pages, responsiveness and localization. I also created a Telegram bot to notify volunteers responsible for opening the theatre doors whenever a reservation is made that involves them.',
       subtitle_3:
-        'The tech stack was PERN. React, Redux, PostqreSQL, Express, Node and SCSS/SASS'
+        'The technology stack employed for this project is PERN, utilizing React, Redux, PostgreSQL, Express, Node, and SCSS/SASS. To facilitate seamless payment processing, the website integrates Stripe, and a webhook is employed to promptly confirm or cancel reservations.'
     },
     {
       title: 'ApproKartat',
@@ -24,7 +24,8 @@ const Work = () => {
       link: '',
       figma:
         'https://www.figma.com/file/oQo2kNOQBDLGze7iinD0c0/Approkartat?type=design&node-id=0%3A1&mode=design&t=mqXK7bvKnfLKQz2I-1',
-      shortDescription: "Project for a course 'Design of WWW Services', WIP",
+      shortDescription:
+        "Digital bar crawl map for student events. Project for a course 'Design of WWW Services', WIP",
       subtitle_1:
         'This project is under work for the course Design of WWW Services D with the same team as the Kylän Keittiö website. Appros or bar crawls are one of the more popular student events out there.',
       subtitle_2:
