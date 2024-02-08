@@ -10,20 +10,6 @@ import { IconContext } from 'react-icons'
 const Header = () => {
   const textRef = useRef<HTMLSpanElement>(null)
 
-  // const welcometext = {
-  //   whileInView: {
-  //     x: '200px',
-  //     transition: { duration: 2, ease: 'easeOut' }
-  //   }
-  // }
-
-  // const welcomename = {
-  //   whileInView: {
-  //     x: '200px',
-  //     transition: { duration: 3, ease: 'easeOut' }
-  //   }
-  // }
-
   const handleIconClick = (name: string) => {
     switch (name) {
       case 'github':
@@ -43,7 +29,7 @@ const Header = () => {
       strings: [
         'UX/UI Design',
         'Frontend development',
-        'User Research',
+        'Fullstack',
         'Design',
         'Coffee',
         'Houseplants!'
@@ -115,11 +101,19 @@ const Header = () => {
           whileInView={card.whileInView}
         >
           <motion.div className={styles.squarecards}>
-            <motion.img
-              src="juhaplaceholder.jpg"
+            <motion.div
               className={styles.card_cover}
               whileInView={cover.whileInView}
-            ></motion.img>
+            >
+              <Image
+                src="/../public/juhaplaceholder.jpg"
+                alt="juha's face and his wall of lps"
+                width={400}
+                height={500}
+                className={styles.card_cover}
+                sizes="50wv"
+              />
+            </motion.div>
             <motion.div
               className={styles.card_back_one}
               whileInView={cover2.whileInView}
