@@ -45,6 +45,7 @@ const Card: React.FC<CardInterface> = (project) => {
               alt="ball of roots logo"
               width={600}
               height={600}
+              sizes="60vw"
             />
           </div>
         )}
