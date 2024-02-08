@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import styles from './Header.module.scss'
 import { motion } from 'framer-motion'
 import { init } from 'ityped'
-import juhaplaceholder from '../public/juhaplaceholder.jpg'
+import juhaplaceholder from '../../../public/juhaplaceholder.jpg'
 import Image from 'next/image'
 import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai'
 import { IconContext } from 'react-icons'
@@ -106,7 +106,7 @@ const Header = () => {
               whileInView={cover.whileInView}
             >
               <Image
-                src="/../public/juhaplaceholder.jpg"
+                src={juhaplaceholder}
                 alt="juha's face and his wall of lps"
                 width={400}
                 height={500}
