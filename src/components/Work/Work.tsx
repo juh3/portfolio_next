@@ -99,6 +99,7 @@ const Work = () => {
       <div className={styles.projects}>
         {projects.map((work, index) => (
           <motion.div
+            viewport={{ once: true }}
             key={index}
             style={{ marginBottom: '48px' }}
             initial={{ opacity: 0, y: 60 }}
@@ -121,6 +122,7 @@ const Work = () => {
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
+        viewport={{ once: true }}
         style={{
           display: 'flex',
           alignItems: 'center',

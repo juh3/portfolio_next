@@ -25,6 +25,7 @@ const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
         {typeof nowPlaying !== 'string' && nowPlaying.isPlaying && (
           <motion.div
             className={styles.now_playing}
+            viewport={{ once: true }}
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0, transition: { delay: 0.07 } }}
           >
@@ -47,6 +48,7 @@ const Music = ({ topFive }: { topFive: ParsedSong[] }) => {
                 ? `${styles.topFive_wrapper}`
                 : `${styles.topFive_centered}`
             }
+            viewport={{ once: true }}
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0, transition: { delay: 0.07 } }}
           >

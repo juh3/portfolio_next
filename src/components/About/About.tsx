@@ -11,30 +11,33 @@ const About = () => {
       <div className={styles.inner}>
         <motion.div
           initial={{ opacity: 0, y: 60 }}
+          viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
           className={styles.wrapper}
         >
           <p>
-            I&apos;m a MSc student in Aalto University, studying Human-Computer
-            Interaction. Currently writing my master&apos;s thesis and expecting
-            to graduate on 29.12.2023. <br />
+            I&apos;m a fresh IT graduate from Aalto University. Majored in
+            Human-Computer Interaction. <br />
             <br />
-            #OpenToWork starting from January 2024.
+            Looking for my first professional experience in IT!
           </p>
         </motion.div>
         <motion.div
           className={styles.wrapper}
+          viewport={{ once: true }}
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
         >
           <p>
-            Interested in roles in frontend development, UX/UI design, service
-            design and in the field of user research. I want to create seamless
-            and satisfying user experiences that are human-centred.
+            Interested in roles in both frontend and fullstack development,
+            UX/UI design, service design and in the field of user research. I
+            want to create seamless and satisfying user experiences that are
+            human-centred.
           </p>
         </motion.div>
         <motion.div
           className={styles.wrapper}
+          viewport={{ once: true }}
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
         >
