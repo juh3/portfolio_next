@@ -82,9 +82,9 @@ const Header = () => {
 
             <h1 className={styles.name}> I am Juha</h1>
           </div>
-          <h3 className={styles.interests}>
+          <h2 className={styles.interests}>
             Interested in: <br></br>
-          </h3>
+          </h2>
           <span
             className={styles.interests}
             id={styles.span}
