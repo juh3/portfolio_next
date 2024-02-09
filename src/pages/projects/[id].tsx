@@ -56,7 +56,6 @@ const projects = [
     title: 'Fat Ramen',
     image: '/fatramen_affinitydiagram.png',
     image_2: '/fatramen_usergroups.png',
-    image_3: '/fatramen_cjourney.png',
     image_4: '/fatramen_touchpoints.png',
     link: '',
     type: '[User research]',
@@ -130,19 +129,14 @@ const SingleProjectPage: NextPage = () => {
               )}
               <p className={styles.bodyText}>{project.subtitle_2}</p>
               <br />
-              {project?.image_3 && project?.image_4 && (
+              {project?.image_4 && (
                 <div className={styles.imageContainerforTwo}>
-                  <Image
-                    src={project.image_3}
-                    alt={project.title}
-                    width={600}
-                    height={250}
-                  />
                   <Image
                     src={project.image_4}
                     alt={project.title}
-                    width={600}
-                    height={250}
+                    width={500}
+                    height={300}
+                    sizes="50vw"
                   />
                 </div>
               )}
