@@ -53,6 +53,21 @@ const projects = [
       'The tech stack was t3. Next, Prisma, tRPC, TypeScript and React'
   },
   {
+    title: 'Fat Ramen',
+    image: '/fatramen_affinitydiagram.png',
+    image_2: '/fatramen_usergroups.png',
+    image_3: '/fatramen_cjourney.png',
+    image_4: '/fatramen_touchpoints.png',
+    link: '',
+    type: '[User research]',
+    shortDescription:
+      'A 5 people project for the course "User-centred Methods for Product and Service Design"',
+    subtitle_1:
+      'The point of the course project was to conduct user research for a restaurant in the Greater Helsinki area with the tools and knowledge we gained from the first part of the course. We ended up with Fat Ramen Hietalahti. We conducted rapid ethnography as well as semi-structured interviews with customers to gather data for analysis. We made transcipts of the recorded interviews and created an affinity diagram from the findings.',
+    subtitle_2:
+      'Then we defined our user groups based on the data as well as crafted personas to reflect the 3 main user groups: work group eaters, japanese food enthusiasts and non-work group eaters. We created a customer journey map to understand better the experience of the customer. We then analyzed and evaluated the customers experience at the various touch points. '
+  },
+  {
     title: 'Ball of Roots',
     image: '/ballofroots_frontpage.png',
     shortDescription:
@@ -91,9 +106,10 @@ const SingleProjectPage: NextPage = () => {
               <div className={styles.imageContainer}>
                 <Image
                   src={project?.image}
-                  alt="ball of roots logo"
+                  alt={project.title}
                   width={500}
                   height={300}
+                  sizes="50vw"
                 />
               </div>
             )}
@@ -101,8 +117,35 @@ const SingleProjectPage: NextPage = () => {
             <div className={styles.modalBody}>
               <p className={styles.bodyText}>{project.subtitle_1}</p>
               <br />
+              {project?.image_2 && (
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={project.image_2}
+                    alt={project.title}
+                    width={500}
+                    height={300}
+                    sizes="50vw"
+                  />
+                </div>
+              )}
               <p className={styles.bodyText}>{project.subtitle_2}</p>
               <br />
+              {project?.image_3 && project?.image_4 && (
+                <div className={styles.imageContainerforTwo}>
+                  <Image
+                    src={project.image_3}
+                    alt={project.title}
+                    width={600}
+                    height={250}
+                  />
+                  <Image
+                    src={project.image_4}
+                    alt={project.title}
+                    width={600}
+                    height={250}
+                  />
+                </div>
+              )}
               <p className={styles.bodyText}>{project.subtitle_3}</p>
             </div>
 

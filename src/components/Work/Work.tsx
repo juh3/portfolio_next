@@ -9,6 +9,7 @@ const Work = () => {
       title: 'Kinopoli',
       image: '/kinopoli_frontpage.png',
       link: '',
+      type: '[Fullstack]',
       shortDescription:
         'A reservation site for the movie theater Kinopoli. Stack included React, Node, Express, Stripe, SCSS and PostgreSQL. WIP, production soon up. A 3 people project.',
 
@@ -23,6 +24,7 @@ const Work = () => {
       title: 'ApproKartat',
       image: '/approkartat.png',
       link: '',
+      type: '[User research, UX/UI design, Frontend]',
       figma:
         'https://www.figma.com/file/oQo2kNOQBDLGze7iinD0c0/Approkartat?type=design&node-id=0%3A1&mode=design&t=mqXK7bvKnfLKQz2I-1',
       shortDescription:
@@ -35,7 +37,16 @@ const Work = () => {
         'I conducted user research and semi-structured interviews, crafted personas and designed the UI with the WCAG4.0 in mind. I did also some frontend work. The stack was t3. Design tool was Figma.'
     },
     {
+      title: 'Fat Ramen',
+      image: '/fatramen_affinitydiagram.png',
+      link: '',
+      type: '[User research]',
+      shortDescription:
+        'A 5 people project for the course "User-centred Methods for Product and Service Design"'
+    },
+    {
       title: 'Kylän Keittiö',
+      type: '[UX/UI design, Frontend]',
       figma:
         'https://www.figma.com/file/6I6jvReCh8YJicJLFeLVWq/kyl%C3%A4nkeitti%C3%B6?type=design&mode=design&t=2mLOQJJ5XKt7vzEU-0',
       image: '/kylankeittio_figma.png',
@@ -52,6 +63,7 @@ const Work = () => {
     {
       title: 'Ball of Roots',
       image: '/ballofroots_frontpage.png',
+      type: '[Fullstack]',
       shortDescription:
         'My first project after completing the FullStack Open course. A plant shop. Stack included React, Node, and MongoDB',
       link: 'https://ballofroots.com/',
@@ -110,6 +122,7 @@ const Work = () => {
               image={work.image}
               shortDescription={work.shortDescription}
               link={work.link}
+              type={work?.type}
               figma={work?.figma}
               subtitle_1={work.subtitle_1}
               subtitle_2={work.subtitle_2}

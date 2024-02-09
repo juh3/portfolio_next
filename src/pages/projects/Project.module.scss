@@ -69,6 +69,25 @@
     }
   }
 }
+.imageContainerforTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+  gap: 24px;
+  img {
+    border-radius: 12px;
+    @media (max-width: 913px) {
+      width: 50%;
+      height: auto;
+    }
+    @media (max-width: 648px) {
+      width: 60%;
+      border-radius: 0px;
+    }
+  }
+}
 
 .modalBody {
   display: flex;
