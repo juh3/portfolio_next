@@ -13,6 +13,7 @@ interface CardInterface {
   subtitle_3?: string
   figma?: string
   github?: string
+  type?: string
   smallCardClick?: boolean
 }
 
@@ -42,7 +43,7 @@ const Card: React.FC<CardInterface> = (project) => {
           <div className={styles.card_image}>
             <Image
               src={project.image}
-              alt="ball of roots logo"
+              alt={project.title}
               width={600}
               height={600}
               sizes="60vw"
@@ -52,7 +53,13 @@ const Card: React.FC<CardInterface> = (project) => {
         <div className={styles.card_description}>
           {!project.image && <div style={{ marginTop: '4px' }}></div>}
           <h2>{project.title}</h2>
-          <p>{project.shortDescription}</p>
+          <p>
+            <span>
+              {project?.type}
+              {'  '}
+            </span>
+            {project.shortDescription}
+          </p>
         </div>
       </div>
     </div>
