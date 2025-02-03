@@ -126,6 +126,8 @@ const Header = () => {
                 value={{ color: 'black', className: styles.icon }}
               >
                 <AiOutlineGithub
+                  className={styles.icon}
+                  style={{ color: 'black' }}
                   onClick={() => handleIconClick('github')}
                   onTouchStart={() => handleIconClick('github')}
                 />
@@ -137,7 +139,10 @@ const Header = () => {
                 value={{ color: 'black', className: styles.icon }}
               >
                 <AiOutlineLinkedin
+                  className={styles.icon}
+                  style={{ color: 'black' }}
                   onClick={() => handleIconClick('linkedin')}
+                  onTouchStart={() => handleIconClick('linkedin')}
                 />
                 <div className={styles.button_layer}></div>
               </IconContext.Provider>

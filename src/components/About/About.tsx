@@ -19,7 +19,7 @@ const About = () => {
             I&apos;m a fresh IT graduate from Aalto University. Majored in
             Human-Computer Interaction. <br />
             <br />
-            Looking for my first professional experience in IT!
+            Working currently @ Sanoma as a Junior FullStack Developer.
           </p>
         </motion.div>
         <motion.div
@@ -35,17 +35,16 @@ const About = () => {
             human-centred.
           </p>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className={styles.wrapper}
           viewport={{ once: true }}
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
         >
           <p>
-            Completed the FullStack Open course with 11 ECTs and Aalto&apos;s
-            own web development course. You can find my own projects below!
+          You can find my own projects below!
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   )
