@@ -19,7 +19,7 @@ const About = () => {
             I&apos;m a fresh IT graduate from Aalto University. Majored in
             Human-Computer Interaction. <br />
             <br />
-            Working currently @ Sanoma as a Junior FullStack Developer.
+            Working currently @ Sanoma as a Software Developer.
           </p>
         </motion.div>
         <motion.div
