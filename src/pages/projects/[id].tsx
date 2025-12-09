@@ -12,7 +12,7 @@ const projects = [
   {
     title: 'Kinopoli',
     image: '/kinopoli_frontpage.png',
-    link: 'https://kinopoli-client-production.up.railway.app',
+    link: 'https://kinopoli.fi',
     shortDescription:
       'A reservation site for the movie theater Kinopoli. Stack included React, Node, Express, Stripe, SCSS and PostgreSQL. WIP, production soon up. A 3 people project.',
     subtitle_1:
