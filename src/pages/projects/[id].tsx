@@ -29,7 +29,7 @@ const projects = [
     figma:
       'https://www.figma.com/file/oQo2kNOQBDLGze7iinD0c0/Approkartat?type=design&node-id=0%3A1&mode=design&t=mqXK7bvKnfLKQz2I-1',
     shortDescription:
-      "Digital bar crawl map for student events. Project for a course 'Design of WWW Services', WIP",
+      "Digital bar crawl map for student events. Project for a course 'Design of WWW Services'",
     subtitle_1:
       'This project as is was for the course Design of WWW Services D and we will continue working on it during the Spring with the same team as the Kylän Keittiö website. Appros or bar crawls are one of the more popular student events out there and our idea tries to replace the clunky physical bar crawl stamp and map. In addition, there are some hurdles of how Appros are organized currently. We wish to change that: by being a time saver for the organizer, by being a more sustainable option and offering more satisfaction to participants and organizers.',
     subtitle_2:

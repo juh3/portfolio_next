@@ -11,7 +11,7 @@ const Work = () => {
       link: '',
       type: '[Fullstack]',
       shortDescription:
-        'A reservation site for the movie theater Kinopoli. Stack included React, Node, Express, Stripe, SCSS and PostgreSQL. WIP, production soon up. A 3 people project.',
+        'A reservation site for the movie theater Kinopoli. Stack included React, Node, Express, Stripe, SCSS and PostgreSQL.',
 
       subtitle_1:
         'Kinopoli is in dire need of a new website, especially with the renovation of the theatre that happened during Summer 2023. After a brief hiatus, the website overhaul project has been restarted by a team comprising myself, Ilari, and Mikko.',
@@ -28,7 +28,7 @@ const Work = () => {
       figma:
         'https://www.figma.com/file/oQo2kNOQBDLGze7iinD0c0/Approkartat?type=design&node-id=0%3A1&mode=design&t=mqXK7bvKnfLKQz2I-1',
       shortDescription:
-        "Digital bar crawl map for student events. Project for a course 'Design of WWW Services', WIP",
+        "Digital bar crawl map for student events. Project for a course 'Design of WWW Services'",
       subtitle_1:
         'This project is under work for the course Design of WWW Services D with the same team as the Kylän Keittiö website. Appros or bar crawls are one of the more popular student events out there.',
       subtitle_2:
